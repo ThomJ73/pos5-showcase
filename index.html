@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>POS5 – Projektübersicht</title>
+<style>
+  @font-face{font-family:"ICCM2";src:local("ICCM2"),url("fonts/ICCM2a.ttf") format("truetype");font-weight:normal;font-style:normal}
+  @page { size: 1080px 1080px; margin: 0; }
+  :root{
+    --navy:#070d24; --navy2:#0e1a45; --blue:#1d4ed8; --cyan:#38bdf8; --teal:#3f7691;
+    --orange:#fb923c; --green:#34d399; --violet:#a78bfa; --text:#e8edff; --muted:#9fb0e0;
+    --card:rgba(255,255,255,.06); --line:rgba(255,255,255,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#222}
+  body{font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text);
+       -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:1080px;height:1080px;position:relative;overflow:hidden;
+        background:radial-gradient(900px 600px at 85% -10%,rgba(56,189,248,.18),transparent 60%),
+                   radial-gradient(800px 600px at -10% 110%,rgba(29,78,216,.35),transparent 60%),
+                   linear-gradient(160deg,var(--navy),var(--navy2));
+        page-break-after:always;break-after:page;padding:56px 60px 0}
+  .page:last-child{page-break-after:auto;break-after:auto}
+  @media screen{ .page{margin:30px auto;box-shadow:0 10px 40px #000a} }
+
+  header.top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px}
+  .kicker{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  h2{font-size:46px;line-height:1.05;font-weight:800;margin-top:8px;letter-spacing:-.01em}
+  h2 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--violet));
+        -webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo{font-family:"Arial Black",Impact,sans-serif;font-style:italic;font-weight:900;font-size:34px;
+        letter-spacing:-.02em;color:#fff;text-shadow:0 0 18px rgba(56,189,248,.6)}
+  footer.foot{position:absolute;left:60px;right:60px;bottom:26px;display:flex;justify-content:space-between;
+        font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+
+  .shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);
+        box-shadow:0 18px 40px rgba(0,0,0,.45);background:#fff;position:relative}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+  figure figcaption{margin-top:10px;font-size:16px;color:var(--muted)}
+  figure figcaption b{color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .card h3{font-size:19px;margin-bottom:6px}
+  .card p,.card li{font-size:16px;line-height:1.45;color:var(--muted)}
+  ul.pts{list-style:none}
+  ul.pts li{position:relative;padding-left:26px;margin-bottom:11px;font-size:18px;line-height:1.4;color:var(--text)}
+  ul.pts li:before{content:"";position:absolute;left:0;top:.5em;width:12px;height:12px;border-radius:4px;
+        background:linear-gradient(135deg,var(--cyan),var(--violet))}
+  ul.pts li span{color:var(--muted);display:block;font-size:15px}
+  .chip{display:inline-block;padding:7px 15px;border-radius:999px;font-size:16px;font-weight:600;
+        background:rgba(255,255,255,.09);border:1px solid var(--line);margin:0 8px 8px 0}
+  .grid2{display:grid;grid-template-columns:450px 450px;gap:28px 30px;justify-content:center}
+  .grid2 .shot{height:375px}
+
+  /* ---------- Seite 1: Titel ---------- */
+  .cover{padding:0;background:var(--navy)}
+  .cover .hero{position:absolute;left:0;top:0;width:1080px;height:900px;
+        -webkit-mask-image:linear-gradient(#000 74%,transparent 94%);mask-image:linear-gradient(#000 74%,transparent 94%)}
+  .cover .hero img{width:100%;height:100%;display:block}
+  .cover .shade{position:absolute;inset:0;
+        background:linear-gradient(180deg,rgba(7,13,36,0) 50%,rgba(7,13,36,.92) 77%,var(--navy) 95%)}
+  .cover .badge{position:absolute;left:36px;top:30px;background:rgba(7,13,36,.88);border:1px solid var(--cyan);
+        padding:16px 34px;border-radius:999px;font-size:30px;letter-spacing:.16em;box-shadow:0 8px 30px rgba(0,0,0,.45);font-weight:700;
+        color:var(--cyan);text-transform:uppercase}
+  .cover .band{position:absolute;left:60px;right:60px;bottom:94px}
+  .cover .name{font-family:"Arial Black",Impact,sans-serif;font-style:italic;font-weight:900;font-size:128px;line-height:.9;
+        letter-spacing:-.03em;color:#fff;text-shadow:0 0 40px rgba(56,189,248,.55)}
+  .cover .name small{display:block;font-family:"Segoe UI",Arial,sans-serif;font-style:normal;font-weight:600;
+        font-size:25px;letter-spacing:.03em;color:var(--muted);text-shadow:none;margin-top:12px}
+  .cover .stack{position:absolute;right:0;bottom:-58px;text-align:right;width:460px}
+  .cover .stack .chip{margin:0 0 8px 8px}
+  .pill-py{border-color:#3b82f6!important;color:#bfdbfe}
+  .pill-vb{border-color:#a78bfa!important;color:#ddd6fe}
+  .pill-js{border-color:#fbbf24!important;color:#fde68a}
+  .pill-css{border-color:#34d399!important;color:#a7f3d0}
+
+  /* ---------- Seite 2 ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+  .stat{text-align:center;padding:10px 8px}
+  .stat b{display:block;font-size:42px;font-weight:800;color:var(--cyan)}
+  .stat span{font-size:15px;color:var(--muted)}
+
+  /* ---------- Architektur ---------- */
+  .arch{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .layer{border-radius:18px;padding:24px 24px 16px;border:1px solid var(--line);background:var(--card)}
+  .layer h3{font-size:21px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+  .layer.web h3{color:var(--cyan)} .layer.win h3{color:var(--violet)} .layer.data h3{color:var(--green)} .layer.ops h3{color:var(--orange)}
+  .node{display:inline-block;margin:0 10px 10px 0;padding:10px 16px;border-radius:10px;font-size:19px;font-weight:600;
+        background:rgba(255,255,255,.08);border:1px solid var(--line)}
+  .flow{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0 30px;font-size:19px;font-weight:600}
+  .flow .box{padding:18px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.07);text-align:center}
+  .flow .box small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+  .flow .arrow{color:var(--cyan);font-size:26px}
+
+  /* ---------- Sprachen ---------- */
+  .bar{margin-bottom:26px}
+  .bar .lbl{display:flex;justify-content:space-between;font-size:20px;font-weight:700;margin-bottom:6px}
+  .bar .lbl span{color:var(--muted);font-weight:500;font-size:16px}
+  .bar .track{height:28px;border-radius:14px;background:rgba(255,255,255,.08);overflow:hidden}
+  .bar .fill{height:100%;border-radius:14px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+  /* ---------- Skills ---------- */
+  .skills{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  .skills .card{min-height:250px;padding:24px}
+  .skills .card h3{display:flex;align-items:center;gap:10px;font-size:23px;margin-bottom:10px}.skills .card p{font-size:18px}
+  .dot{width:14px;height:14px;border-radius:50%}
+  .cta{margin-top:20px;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;border-radius:18px;
+       background:linear-gradient(90deg,rgba(29,78,216,.55),rgba(167,139,250,.35));border:1px solid var(--line)}
+  .cta b{font-size:28px} .cta span{color:var(--muted);font-size:17px}
+
+  .note{margin-top:4px;font-size:14.5px;line-height:1.35;color:#c4d0f5;padding-left:12px;border-left:3px solid var(--cyan)}
+  .g4{grid-template-columns:430px 430px!important}
+  .g4 .shot{height:358px!important}
+  .plat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+  .plat div{border-radius:12px;padding:12px 14px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-size:17px;font-weight:700}
+  .plat div small{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:2px}
+  .plat .ok{border-color:var(--green);color:#a7f3d0}
+  .plat .fut{border-style:dashed}
+  .inh{display:flex;align-items:center;gap:12px;margin-top:14px}
+  .inh .box{flex:1;text-align:center;padding:14px 10px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.07);font-size:19px;font-weight:700}
+  .inh .box small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+  .inh .arrow{color:var(--cyan);font-size:26px}
+  .cover .name{position:relative;display:flex;align-items:baseline}
+  .cover .tagline{position:static;margin-left:30px;white-space:nowrap;font-family:"Segoe UI",Arial,sans-serif;font-style:normal;
+        font-weight:600;font-size:27px;letter-spacing:.01em;color:#fff;text-shadow:none}
+  .cover .subline{margin-top:8px;font-size:19px;color:var(--muted);line-height:25px}
+  .cover .pos{font-family:"ICCM2","Arial Black",Impact,sans-serif;font-weight:normal;font-style:normal}
+  .cover .pos .sp{font-family:"Segoe UI",Arial,sans-serif;font-size:27px;font-weight:600;white-space:pre;text-shadow:none}
+  .cover .name{margin-bottom:54px}
+  /* Titelseite: im PDF als fertiges Bild (img/cover.png, wird von export_pdf.ps1 erzeugt),
+     weil LinkedIn Masken und Glow-Effekte nicht korrekt darstellt */
+  .cover .flat{display:none;position:absolute;left:0;top:0;width:1080px;height:1080px}
+  @media print{ .cover > *:not(.flat){display:none!important} .cover .flat{display:block} }
+</style>
+</head>
+<body>
+
+<!-- ============ 1 · TITEL ============ -->
+<section class="page cover">
+  <img class="flat" src="img/cover.png" alt="POS5 Titelseite">
+  <div class="hero"><img src="img/ecrdash.png" alt="POS5 Kassenoberfläche"></div>
+  <div class="shade"></div>
+  <div class="badge">Projekt-Portfolio · 2026</div>
+  <div class="band">
+    <div class="name"><span class="pos">POS<span class="sp"> </span>5</span><span class="tagline">Eine flexibel einsetzbare Kassensoftware</span></div>
+    <div class="subline">Point of Sale · Browser-GUI auf wählbarer Hardware</div>
+    <div class="stack">
+      <span class="chip pill-py">Python</span><span class="chip pill-js">JavaScript</span><span class="chip pill-css">HTML · CSS</span><span class="chip pill-vb">.NET</span>
+      <br><span class="chip">Django 5</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · ÜBERBLICK ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">Überblick</div><h2 style="font-size:36px">Eine Kasse, <em>ein heterogenes Softwareprojekt</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:34px;align-items:start">
+    <div>
+      <ul class="pts">
+        <li>Webbasierte Kassenlösung<span>Hardwareunabhängig und flexibel</span></li>
+        <li>Mandantenbasierte Architektur<span>Hierarchie mit Vererbung</span></li>
+        <li>Touch-GUI im Browser <span>HTML · CSS · JavaScript · htmx</span></li>
+        <li>Backend mit Django <span>Rabatte, Steuern, Währungen, X-/Z-Berichte</span></li>
+        <li>Windows-Dienste in .NET <span>Drucker, Schublade, Kunden-Display, EFT-Terminal</span></li>
+        <li>Deployment per Docker Compose <span>PostgreSQL · gunicorn · nginx</span></li>
+      </ul>
+    </div>
+    <figure><div class="shot" style="height:255px"><img src="img/startseite.png" alt="Startseite"></div>
+      <figcaption><b>Startseite:</b> Verkauf, Tagesübersicht, Abschlüsse</figcaption></figure>
+  </div>
+  <div class="stats">
+    <div class="card stat"><b>≈ 43k</b><span>Zeilen Code</span></div>
+    <div class="card stat"><b>50+</b><span>Datenbank-Modelle</span></div>
+    <div class="card stat"><b>3</b><span>Windows-Komponenten</span></div>
+    <div class="card stat"><b>3</b><span>Docker-Container</span></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+    <div class="card"><h3 style="color:var(--cyan)">Web-App</h3><p>Django-Backend, Touch-GUI im Browser und Admin-Module für Layouts, Kampagnen und Benutzer.</p></div>
+    <div class="card"><h3 style="color:var(--violet)">Windows-Client</h3><p>Dienst, Systray-Tool und Updater in .NET verbinden die Kasse mit Drucker, Schublade und Terminal.</p></div>
+    <div class="card"><h3 style="color:var(--orange)">Betrieb</h3><p>Docker Compose mit PostgreSQL, gunicorn und nginx – reproduzierbar auf Linux ausrollbar.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px;padding:16px 22px">
+    <h3 style="font-size:20px">Geräte- und betriebssystemunabhängig vorbereitet</h3>
+    <p style="font-size:16.5px">Die Kasse läuft im Browser – der Client für Hardware-Anbindung existiert aktuell nur für Windows. Android und Apple sind künftig möglich.</p>
+    <div class="plat">
+      <div class="ok">Windows<small>Client verfügbar</small></div>
+      <div class="fut">Android<small>Anbindung künftig möglich</small></div>
+      <div class="fut">Apple (iOS / macOS)<small>Anbindung künftig möglich</small></div>
+    </div>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>02 / 12</span></footer>
+</section>
+
+<!-- ============ 3 · GUI KASSE ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Kassenoberfläche</div><h2>Schnell. Touch-first. <em>Konfigurierbar.</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:600px 1fr;gap:28px;align-items:start">
+    <div class="shot" style="height:501px"><img src="img/kasse-light.png" alt="Kassenoberfläche"></div>
+    <ul class="pts" style="margin-top:6px">
+      <li>Button-Raster <span>Zwei flexibel konfigurierbare Raster in navigierbarer Baumstruktur mit vordefinierten Funktionen oder Artikel gruppiert</span></li>
+      <li>Warenkorb-Tabs <span>mehrere Verkaufsvorgänge parallel abwickelbar</span></li>
+      <li>Ziffernblock <span>freie Eingabe von Betrag, Menge, Rabatt ..</span></li>
+      <li>Geld-Schnellwahl <span>Banknoten &amp; Münzen als Bild, verschiedene Währungen je nach Mandanten-Ländereinstellung</span></li>
+      <li>EFT-Zahlung <span>ein Klick zum Terminal</span></li>
+      <li>Theme pro Benutzer <span>4 verschiedene Themes (hell/dunkel) pro Benutzer abspeicherbar</span></li>
+      <li>DE / CH, CHF <span>Sprache &amp; Währung live</span></li>
+    </ul>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px">
+    <div class="card"><h3>Live-Berechnung</h3><p>Rabatte, Rundung und Total direkt im Warenkorb. MwSt und Tax auf der Quittung, Tax - inklusiv / exklusiv &amp; EFT/BAR eigene Rundung konfigurierbar.</p></div>
+    <div class="card"><h3>Reines Web</h3><p>HTML, CSS und modulares JavaScript auf Django-Templates. Alle Masken passen sich automatisch optimal auf die Bildschirmgröße an.</p></div>
+    <div class="card"><h3>Hardware-ready</h3><p>Scanner, Schublade, Drucker und EFT-Terminal angebunden. Sogar alte Line-Displays sind noch einsetzbar. (EPSON OPOS)</p></div>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>03 / 12</span></footer>
+</section>
+
+<!-- ============ 4 · THEMES & WORKFLOWS ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Themes &amp; Workflows</div><h2>Intuitive GUI - <em>Bildschirm unabhängig</em></h2></div><div class="logo">POS5</div></header>
+  <div class="grid2 g4">
+    <figure><div class="shot"><img src="img/kasse-light.png" alt="Light Theme"></div><figcaption><b>Light Theme</b> – Standardansicht<div class="note">Land CH, Währung CHF, Betrag wird in 5 Rappen abgerundet (Kulanzrundung)</div></figcaption></figure>
+    <figure><div class="shot"><img src="img/kasse-dark.png" alt="Dark Theme" style="object-fit:contain;background:#161616"></div><figcaption><b>Dark Theme</b> – hier Mandant Hamburg<div class="note">Land DE, Währung EUR, Euro-Banknoten und -Münzen. Keine Rundung, cent-genaue Quittung</div></figcaption></figure>
+    <figure><div class="shot"><img src="img/buchungen.png" alt="Buchungen"></div><figcaption><b>Buchungen</b> – Einlage, Abschöpfung, Differenzen</figcaption></figure>
+    <figure><div class="shot"><img src="img/eft-zahlung.png" alt="EFT-Zahlung"></div><figcaption><b>EFT-Zahlung</b> – hier mit Terminal-Simulator</figcaption></figure>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>04 / 12</span></footer>
+</section>
+
+<!-- ============ 5 · ADMINISTRATION ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Administration</div><h2>Alles im Griff – <em>ohne Code</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:start">
+    <figure><div class="shot" style="height:358px"><img src="img/administration.png" alt="Admin-Übersicht"></div></figure>
+    <div>
+    <h3 style="font-size:22px;margin-bottom:12px">Admin-Übersicht</h3>
+    <ul class="pts" style="margin-top:4px">
+      <li>Unternehmensübersicht <span>Mandanten, Filialen, Kassen</span></li>
+      <li>Rabatt-Kampagnen <span>Zeitraum, Produkte, Gruppen</span></li>
+      <li>Benutzerverwaltung <span>Rollen &amp; Rechte</span></li>
+      <li>DataBridge <span>Import / Export via ODBC</span></li>
+      <li>System-Logging <span>Server, Django, PostgreSQL</span></li>
+      <li>Erweiterte Verwaltung <span>Django Tabellenverwaltung für Administratoren</span></li>
+    </ul>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:center;margin-top:36px">
+    <div class="shot" style="height:358px"><img src="img/button-designer.png" alt="Button-Designer"></div>
+    <div>
+      <h3 style="font-size:22px;margin-bottom:8px">Button-Designer</h3>
+      <ul class="pts">
+        <li style="font-size:17px;margin-bottom:8px">Kinderleichte Konfiguration der linken Kassenoberfläche bis in einzelne Filialen</li>
+        <li style="font-size:17px;margin-bottom:8px">Buttons sind einzeln mit Unterlayer, Artikel oder vordefinierten Funktionen belegbar</li>
+        <li style="font-size:17px;margin-bottom:8px">Klick springt in den Unter-Layer</li>
+        <li style="font-size:17px;margin-bottom:8px">Strg + Klick bearbeitet den Button</li>
+        <li style="font-size:17px;margin-bottom:8px">Beschriftung, Scan-Text/Funktion und Farbe</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>05 / 12</span></footer>
+</section>
+
+<!-- ============ 6 · MANDANTEN & VERERBUNG ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Unternehmensbaum</div><h2>Mandanten, Länder &amp; <em>Vererbung</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:580px 1fr;gap:28px;align-items:start">
+    <figure><div class="shot" style="height:483px"><img src="img/unternehmensbaum.png" alt="Unternehmensbaum"></div>
+      <figcaption><b>Unternehmensbaum:</b> Mandant · Filiale · Kasse</figcaption></figure>
+    <div>
+      <div class="card" style="margin-bottom:16px;border-color:var(--cyan)"><h3 style="color:var(--cyan)">Mandanten weltweit</h3><p>Mandanten können auch in anderen Ländern liegen – mit eigener Rundungs- und Mehrwertsteuer-Berechnung.</p></div>
+      <div class="card"><h3 style="color:var(--violet)">Vererbt wird</h3><p>Button-Raster-Konfiguration, Bilder (Logos) und Quittungstexte.</p></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:26px;padding:22px 26px">
+    <h3 style="font-size:21px">Vererbungskette</h3>
+    <div class="inh">
+      <div class="box">Hauptlayer<small>Standard für alle</small></div><div class="arrow">→</div>
+      <div class="box">Mandant<small>überschreibt Hauptlayer</small></div><div class="arrow">→</div>
+      <div class="box">Filiale<small>überschreibt Mandant</small></div>
+    </div>
+    <p style="margin-top:14px;font-size:17px">Leere Felder erben automatisch vom übergeordneten Layer („Leer = Standard vom Mandant“).</p>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>06 / 12</span></footer>
+</section>
+
+<!-- ============ 7 · ADMIN-MODULE ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Module</div><h2>Kampagnen, Rechte, <em>Daten &amp; Logs</em></h2></div><div class="logo">POS5</div></header>
+  <div class="grid2">
+    <figure><div class="shot"><img src="img/kampagnen.png" alt="Kampagnen"></div><figcaption><b>Rabatt-Kampagnen</b> – Zeitraum, Produkte, Gruppen</figcaption></figure>
+    <figure><div class="shot"><img src="img/benutzer.png" alt="Benutzer"></div><figcaption><b>Benutzer &amp; Rechte</b> – Rollen, Kassen- und Backend-Rechte</figcaption></figure>
+    <figure><div class="shot"><img src="img/databridge.png" alt="DataBridge"></div><figcaption><b>DataBridge</b> – ODBC-Import/Export, Schema-Designer</figcaption></figure>
+    <figure><div class="shot"><img src="img/logging.png" alt="Logging"></div><figcaption><b>System-Logging</b> – Server, Django, PostgreSQL, nginx</figcaption></figure>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>07 / 12</span></footer>
+</section>
+
+<!-- ============ 8 · HARDWARE & SETUP ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">.NET · Windows</div><h2>Wo der Browser <em>Hardware trifft</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+    <figure><div class="shot" style="height:440px"><img src="img/systray.png" alt="Systray" style="object-fit:contain;background:#1a1426"></div>
+      <figcaption><b>Systray-Tool</b> – ECR-Auswahl, EFT, OPOS, Logo</figcaption></figure>
+    <figure><div class="shot" style="height:440px"><img src="img/installer.png" alt="Installer" style="object-fit:contain;background:#fff"></div>
+      <figcaption><b>Setup</b> – MSI-Installer &amp; Hardware-Einstellungen</figcaption></figure>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:30px">
+    <div class="card"><h3>pos5service</h3><p>Windows-Dienst mit lokalem Hardware-Webserver für Drucker, Schublade &amp; Display (OPOS).</p></div>
+    <div class="card"><h3>EFT-Terminals</h3><p>Protokoll-Module für SIX TIM, ZVT, OPI und weitere Terminals.</p></div>
+    <div class="card"><h3>Updater &amp; MSI</h3><p>Automatische Client-Updates mit Statusmeldung an Django, Installer per WiX.</p></div>
+  </div>
+  <div class="card" style="margin-top:22px;padding:22px 26px"><p style="font-size:19px">Das Web-GUI ruft per JavaScript den <b style="color:#fff">lokalen .NET-Hardwareserver</b> auf – so druckt der Browser Belege, öffnet die Schublade und startet EFT-Zahlungen.</p></div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>08 / 12</span></footer>
+</section>
+
+<!-- ============ 9 · ARCHITEKTUR ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">Tech-Stack · Architektur</div><h2>Ein System, <em>drei Welten</em></h2></div><div class="logo">POS5</div></header>
+  <div class="flow">
+    <div class="box">Browser-GUI<small>HTML · CSS · JS · htmx</small></div><div class="arrow">⇄</div>
+    <div class="box">nginx<small>Reverse Proxy · Static</small></div><div class="arrow">⇄</div>
+    <div class="box">gunicorn + Django<small>Python 3.14 · Django 5.2</small></div><div class="arrow">⇄</div>
+    <div class="box">PostgreSQL 16<small>Daten</small></div>
+  </div>
+  <div class="arch">
+    <div class="layer web"><h3>Web &amp; Backend</h3>
+      <span class="node">Python</span><span class="node">Django 5.2</span><span class="node">django-environ</span><span class="node">WhiteNoise</span><span class="node">Pillow</span><span class="node">htmx</span><span class="node">jsPlumb</span><span class="node">flatpickr</span></div>
+    <div class="layer win"><h3>Windows-Client</h3>
+      <span class="node">.NET Framework 4.8</span><span class="node">WinForms Systray</span><span class="node">Windows-Dienst</span><span class="node">Updater</span><span class="node">OPOS</span></div>
+    <div class="layer data"><h3>Daten &amp; Schnittstellen</h3>
+      <span class="node">PostgreSQL</span><span class="node">ODBC</span><span class="node">SQL Server</span><span class="node">SMB</span><span class="node">JSON-APIs</span></div>
+    <div class="layer ops"><h3>Betrieb</h3>
+      <span class="node">Docker Compose</span><span class="node">Linux / Ubuntu</span><span class="node">gunicorn</span><span class="node">nginx</span><span class="node">WiX · MSI</span></div>
+  </div>
+  <div class="card" style="margin-top:28px;padding:24px 26px"><p style="font-size:19px">Das Frontend ist bewusst leichtgewichtig: Server-gerenderte Django-Templates, modulares Vanilla-JavaScript (Warenkorb, Scanner, Zahlung, Keypad) und htmx – ohne schweres SPA-Framework.</p></div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>09 / 12</span></footer>
+</section>
+
+<!-- ============ 10 · SPRACHEN ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">Programmiersprachen</div><h2>Polyglott <em>by Design</em></h2></div><div class="logo">POS5</div></header>
+  <div class="two">
+    <div>
+      <div class="bar"><div class="lbl">HTML / Django-Templates <span>≈ 12.500 Zeilen</span></div><div class="track"><div class="fill" style="width:100%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div></div>
+      <div class="bar"><div class="lbl">Python <span>≈ 11.000 Zeilen</span></div><div class="track"><div class="fill" style="width:88%;background:linear-gradient(90deg,#2563eb,#38bdf8)"></div></div></div>
+      <div class="bar"><div class="lbl">.NET <span>≈ 10.700 Zeilen</span></div><div class="track"><div class="fill" style="width:85%;background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div></div></div>
+      <div class="bar"><div class="lbl">JavaScript <span>≈ 6.300 Zeilen</span></div><div class="track"><div class="fill" style="width:50%;background:linear-gradient(90deg,#f59e0b,#fde047)"></div></div></div>
+      <div class="bar"><div class="lbl">CSS <span>≈ 2.700 Zeilen</span></div><div class="track"><div class="fill" style="width:22%;background:linear-gradient(90deg,#10b981,#6ee7b7)"></div></div></div>
+      <p style="font-size:14px;color:var(--muted);margin-top:8px">Eigener Code ohne Bibliotheken, Migrationen und Hilfsskripte.</p>
+    </div>
+    <div class="card" style="padding:22px 24px">
+      <h3 style="font-size:22px;margin-bottom:12px">Wofür welche Sprache?</h3>
+      <ul class="pts">
+        <li><b>Python</b> – Modelle, Views, Berichte, Kampagnen, DataBridge</li>
+        <li><b>.NET</b> – Dienst, Systray, Updater, Terminal-Protokolle</li>
+        <li><b>JavaScript</b> – Warenkorb-State, Scanner, Zahlungen</li>
+        <li><b>HTML/CSS</b> – Templates, Themes, Touch-Layout</li>
+        <li><b>SQL</b> – PostgreSQL, ODBC-Anbindung an SQL Server</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:12px;padding:22px 24px" class="card">
+    <h3>Bibliotheken &amp; Frameworks</h3>
+    <div style="margin-top:8px"><span class="chip">Django 5.2</span><span class="chip">psycopg2</span><span class="chip">pyodbc</span><span class="chip">smbprotocol</span><span class="chip">WhiteNoise</span><span class="chip">Pillow</span><span class="chip">htmx</span><span class="chip">jsPlumb</span><span class="chip">JsBarcode</span><span class="chip">QRious</span><span class="chip">flatpickr</span><span class="chip">Newtonsoft.Json</span></div>
+  </div>
+  <div class="flow" style="margin:26px 0 0"><div class="box">JavaScript<small>Browser-GUI</small></div><div class="arrow">→</div><div class="box">Python / Django<small>Fachlogik &amp; Daten</small></div><div class="arrow">→</div><div class="box">.NET<small>Hardware-Dienst</small></div><div class="arrow">→</div><div class="box">Drucker · EFT<small>Kassenhardware</small></div></div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>10 / 12</span></footer>
+</section>
+
+<!-- ============ 11 · DATENMODELL ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">Datenbank · PostgreSQL</div><h2>Das Datenmodell <em>im Überblick</em></h2></div><div class="logo">POS5</div></header>
+  <div class="shot" style="width:960px;height:725px;background:#F4F6F9"><img src="img/er_diagram.svg" alt="ER-Diagramm POS5" style="object-fit:contain"></div>
+  <div style="display:flex;justify-content:space-between;margin-top:14px;font-size:16px;color:var(--muted)"><span><b style="color:#fff">62 Tabellen</b> · 8 Fachbereiche · 74 Foreign Keys</span><span>Vektorgrafik – im PDF beliebig zoombar</span></div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>11 / 12</span></footer>
+</section>
+
+<!-- ============ 12 · SKILLS ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">Meine wichtigsten Skills</div><h2>Was in <em>POS5</em> steckt</h2></div><div class="logo">POS5</div></header>
+  <div class="skills">
+    <div class="card"><h3><span class="dot" style="background:var(--cyan)"></span>Backend</h3><p>Python · Django · REST-ähnliche JSON-APIs · Datenmodellierung · Mandantenfähigkeit · Berichte</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--orange)"></span>Frontend &amp; UX</h3><p>HTML · CSS · JavaScript · htmx · Touch-Bedienung · Themes · Drag &amp; Drop</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--violet)"></span>Hardware</h3><p>Windows: .NET Framework · Windows-Dienste · WinForms · OPOS · Kassenhardware</p></div>
+    <div class="card"><h3><span class="dot" style="background:var(--green)"></span>Zahlung &amp; Fachlogik</h3><p>EFT-Terminals (SIX TIM, ZVT, OPI) · Steuern · Rabatte · Rundung · X-/Z-Abschluss</p></div>
+    <div class="card"><h3><span class="dot" style="background:#f472b6"></span>Daten</h3><p>PostgreSQL · SQL Server (ODBC) · Import/Export · Schema-Mapping · Migrationen</p></div>
+    <div class="card"><h3><span class="dot" style="background:#facc15"></span>DevOps</h3><p>Docker Compose · nginx · gunicorn · Linux-Deployment · WiX/MSI · Auto-Update · Logging</p></div>
+  </div>
+  <div class="card" style="margin-top:24px;padding:24px"><p style="font-size:21px;color:var(--text)">Von der Datenbank über die Web-GUI bis zum Kassendrucker: <b style="color:#fff">ein durchgängiges System.</b> Soweit vorbereitet, dass es mit minimalem Aufwand zur Einsatzbereitschaft endentwickelt werden kann.</p></div>
+  <div class="cta" style="margin-top:28px">
+    <div><b>Thomas Jaisli</b><br><span>Systemdesign, Softwareentwicklung (Full-Stack)</span></div>
+    <div style="text-align:right"><span>Lust auf einen Austausch?</span><br><b style="font-size:22px;color:var(--cyan)">Schreibt mir auf LinkedIn</b></div>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>12 / 12</span></footer>
+</section>
+
+</body>
+</html>

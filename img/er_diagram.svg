@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3420 2583" style="background:#F4F6F9; font-family: 'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <filter id="box-shadow" x="-5%" y="-5%" width="112%" height="114%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="hdr-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B6CB0"/>
+      <stop offset="100%" stop-color="#1E4E8C"/>
+    </linearGradient>
+    <linearGradient id="hdr-grad-sys" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A5568"/>
+      <stop offset="100%" stop-color="#2D3748"/>
+    </linearGradient>
+    <g id="pk-icon">
+      <circle cx="5" cy="5.5" r="3.1" fill="#F59E0B" stroke="#92400E" stroke-width="0.9"/>
+      <circle cx="4.3" cy="5.5" r="1.0" fill="#FEF3C7"/>
+      <path d="M 8 5.5 L 14.2 5.5 L 14.2 8 M 11.8 5.5 L 11.8 7.6" fill="none" stroke="#92400E" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g id="fk-icon">
+      <circle cx="6.5" cy="5.5" r="3" fill="none" stroke="#2563EB" stroke-width="1.3"/>
+      <circle cx="6.5" cy="5.5" r="1.1" fill="#2563EB"/>
+    </g>
+  </defs>
+  <rect x="0" y="0" width="3420" height="2583" fill="#F4F6F9"/>
+  <rect x="50" y="16" width="6" height="34" rx="2" fill="#1E4E8C"/>
+  <text x="64" y="31" font-size="17" font-weight="700" fill="#1E293B">POS5 PostgreSQL Schema — ER-Diagramm (Gruppiert)</text>
+  <text x="64" y="47" font-size="11.5" fill="#64748B">62 Tabellen in 8 Fachbereichen · 74 Foreign Keys · 1 = Primary Key, ∞ = Foreign Key</text>
+
+  <g id="groups-layer">
+    <g class="er-group" id="grp-tenant" data-group="tenant" data-x="50.0" data-y="95.0" data-w="952.0" data-h="915.0" data-color="#0EA5E9" transform="translate(50.0, 95.0)"><rect class="grp-box" x="0" y="0" width="952.0" height="915.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#0EA5E9" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="214.0" height="22" rx="5" fill="#0EA5E9"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Tenant, Filialen &amp; Kassen</text></g><rect class="grp-resize" x="938.0" y="901.0" width="14" height="14" rx="3" fill="#0EA5E9" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-receipts" data-group="receipts" data-x="1072.0" data-y="95.0" data-w="952.0" data-h="764.0" data-color="#2563EB" transform="translate(1072.0, 95.0)"><rect class="grp-box" x="0" y="0" width="952.0" height="764.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#2563EB" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="214.0" height="22" rx="5" fill="#2563EB"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Kasse, Belege &amp; Zahlungen</text></g><rect class="grp-resize" x="938.0" y="750.0" width="14" height="14" rx="3" fill="#2563EB" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-reports" data-group="reports" data-x="2418.0" data-y="95.0" data-w="628.0" data-h="438.0" data-color="#7C3AED" transform="translate(2418.0, 95.0)"><rect class="grp-box" x="0" y="0" width="628.0" height="438.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#7C3AED" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="214.0" height="22" rx="5" fill="#7C3AED"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Tagesabschluss &amp; Berichte</text></g><rect class="grp-resize" x="614.0" y="424.0" width="14" height="14" rx="3" fill="#7C3AED" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-customers" data-group="customers" data-x="2418.0" data-y="1065.0" data-w="628.0" data-h="364.0" data-color="#D97706" transform="translate(2418.0, 1065.0)"><rect class="grp-box" x="0" y="0" width="628.0" height="364.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#D97706" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="183.6" height="22" rx="5" fill="#D97706"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Kunden &amp; Kundenkarten</text></g><rect class="grp-resize" x="614.0" y="350.0" width="14" height="14" rx="3" fill="#D97706" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-products" data-group="products" data-x="1072.0" data-y="1065.0" data-w="1276.0" data-h="612.0" data-color="#059669" transform="translate(1072.0, 1065.0)"><rect class="grp-box" x="0" y="0" width="1276.0" height="612.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#059669" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="373.6" height="22" rx="5" fill="#059669"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Artikelmanagement, Preise, Steuern &amp; Discounts</text></g><rect class="grp-resize" x="1262.0" y="598.0" width="14" height="14" rx="3" fill="#059669" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-ui" data-group="ui" data-x="50.0" data-y="1065.0" data-w="628.0" data-h="421.0" data-color="#EC4899" transform="translate(50.0, 1065.0)"><rect class="grp-box" x="0" y="0" width="628.0" height="421.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#EC4899" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="145.6" height="22" rx="5" fill="#EC4899"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">UI &amp; Style Tools</text></g><rect class="grp-resize" x="614.0" y="407.0" width="14" height="14" rx="3" fill="#EC4899" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-datamgmt" data-group="datamgmt" data-x="50.0" data-y="1732.0" data-w="628.0" data-h="801.0" data-color="#0D9488" transform="translate(50.0, 1732.0)"><rect class="grp-box" x="0" y="0" width="628.0" height="801.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#0D9488" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="267.2" height="22" rx="5" fill="#0D9488"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Datenmanagement &amp; Schnittstellen</text></g><rect class="grp-resize" x="614.0" y="787.0" width="14" height="14" rx="3" fill="#0D9488" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+    <g class="er-group" id="grp-users" data-group="users" data-x="2418.0" data-y="1732.0" data-w="952.0" data-h="593.0" data-color="#475569" transform="translate(2418.0, 1732.0)"><rect class="grp-box" x="0" y="0" width="952.0" height="593.0" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#475569" stroke-opacity="0.48" stroke-width="1.6" stroke-dasharray="6 4"/><g class="grp-handle" style="cursor:move;"><rect class="grp-badge" x="12" y="-11" width="229.2" height="22" rx="5" fill="#475569"/><text class="grp-title" x="23" y="4" font-size="11.5" font-weight="700" fill="#FFFFFF">Benutzerverwaltung &amp; System</text></g><rect class="grp-resize" x="938.0" y="579.0" width="14" height="14" rx="3" fill="#475569" fill-opacity="0.55" style="cursor:nwse-resize;"/></g>
+  </g>
+  <g id="edges-layer">
+    <g class="er-edge" data-from="auth_group_permissions" data-from-col="group_id" data-to="auth_group" data-to-col="id"><path d="M 2770.0 1828.5 L 2717.0 1828.5 Q 2712.0 1828.5 2712.0 1833.5 L 2712.0 2148.5 Q 2712.0 2153.5 2707.0 2153.5 L 2694.0 2153.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="1824.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="2149.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="auth_group_permissions" data-from-col="permission_id" data-to="auth_permission" data-to-col="id"><path d="M 2770.0 1847.5 L 2720.3 1847.5 Q 2715.3 1847.5 2715.3 1842.5 L 2715.3 1814.5 Q 2715.3 1809.5 2710.3 1809.5 L 2694.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="1843.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="auth_permission" data-from-col="content_type_id" data-to="django_content_type" data-to-col="id"><path d="M 2694.0 1847.5 L 2713.7 1847.5 Q 2718.7 1847.5 2718.7 1852.5 L 2718.7 1863.5 Q 2718.7 1868.5 2723.7 1868.5 L 3059.0 1868.5 Q 3064.0 1868.5 3064.0 1863.5 L 3064.0 1814.5 Q 3064.0 1809.5 3069.0 1809.5 L 3094.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2702.0" y="1843.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="django_admin_log" data-from-col="content_type_id" data-to="django_content_type" data-to-col="id"><path d="M 2694.0 2057.5 L 2717.0 2057.5 Q 2722.0 2057.5 2722.0 2052.5 L 2722.0 1888.5 Q 2722.0 1883.5 2727.0 1883.5 L 3053.0 1883.5 Q 3058.0 1883.5 3058.0 1878.5 L 3058.0 1814.5 Q 3058.0 1809.5 3063.0 1809.5 L 3094.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2702.0" y="2053.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="django_admin_log" data-from-col="user_id" data-to="pos_app_customuser" data-to-col="id"><path d="M 2694.0 2076.5 L 2720.3 2076.5 Q 2725.3 2076.5 2725.3 2071.5 L 2725.3 2005.5 Q 2725.3 2000.5 2730.3 2000.5 L 3047.0 2000.5 Q 3052.0 2000.5 3052.0 1995.5 L 3052.0 1929.5 Q 3052.0 1924.5 3057.0 1924.5 L 3094.0 1924.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2702.0" y="2072.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1920.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_branch" data-from-col="branchtenantid" data-to="pos_app_tenant" data-to-col="tenantid"><path d="M 326.0 495.5 L 339.0 495.5 Q 344.0 495.5 344.0 490.5 L 344.0 249.0 Q 344.0 244.0 349.0 244.0 L 703.0 244.0 Q 708.0 244.0 708.0 239.0 L 708.0 177.5 Q 708.0 172.5 713.0 172.5 L 726.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="491.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="714.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_branch" data-from-col="language_id" data-to="pos_app_language" data-to-col="id"><path d="M 326.0 476.5 L 341.7 476.5 Q 346.7 476.5 346.7 471.5 L 346.7 177.5 Q 346.7 172.5 351.7 172.5 L 402.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="472.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="390.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_button" data-from-col="colorid" data-to="pos_app_buttoncolor" data-to-col="colorid"><path d="M 326.0 1294.5 L 344.3 1294.5 Q 349.3 1294.5 349.3 1289.5 L 349.3 1147.5 Q 349.3 1142.5 354.3 1142.5 L 402.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="1290.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="390.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_country" data-from-col="default_currency_code_id" data-to="pos_app_currency" data-to-col="code"><path d="M 726.0 762.5 L 695.0 762.5 Q 690.0 762.5 690.0 757.5 L 690.0 611.5 Q 690.0 606.5 685.0 606.5 L 354.0 606.5 Q 352.0 606.5 352.0 608.5 L 352.0 608.5 Q 352.0 610.5 350.0 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="712.0" y="758.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_currencydenomination" data-from-col="currency_id" data-to="pos_app_currency" data-to-col="code"><path d="M 326.0 858.5 L 335.0 858.5 Q 340.0 858.5 340.0 853.5 L 340.0 615.5 Q 340.0 610.5 335.0 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="854.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer" data-from-col="country_id" data-to="pos_app_country" data-to-col="id"><path d="M 2446.0 1237.5 L 2433.0 1237.5 Q 2428.0 1237.5 2428.0 1232.5 L 2428.0 938.5 Q 2428.0 933.5 2423.0 933.5 L 997.0 933.5 Q 992.0 933.5 992.0 928.5 L 992.0 634.5 Q 992.0 629.5 987.0 629.5 L 974.0 629.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="1233.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="982.0" y="625.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer" data-from-col="customer_tax_group_id" data-to="pos_app_customertaxgroup" data-to-col="id"><path d="M 2694.0 1275.5 L 2703.0 1275.5 Q 2708.0 1275.5 2708.0 1280.5 L 2708.0 1366.5 Q 2708.0 1371.5 2703.0 1371.5 L 2694.0 1371.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2702.0" y="1271.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="1367.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer" data-from-col="default_currency_code_id" data-to="pos_app_currency" data-to-col="code"><path d="M 2446.0 1256.5 L 2409.0 1256.5 Q 2404.0 1256.5 2404.0 1251.5 L 2404.0 998.5 Q 2404.0 993.5 2399.0 993.5 L 359.7 993.5 Q 354.7 993.5 354.7 988.5 L 354.7 615.5 Q 354.7 610.5 349.7 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="1252.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer" data-from-col="language_id" data-to="pos_app_language" data-to-col="id"><path d="M 2446.0 1294.5 L 2433.0 1294.5 Q 2428.0 1294.5 2428.0 1289.5 L 2428.0 998.5 Q 2428.0 993.5 2423.0 993.5 L 673.0 993.5 Q 668.0 993.5 668.0 988.5 L 668.0 177.5 Q 668.0 172.5 663.0 172.5 L 650.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="1290.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="658.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer_customer_groups" data-from-col="customer_id" data-to="pos_app_customer" data-to-col="id"><path d="M 2770.0 1161.5 L 2733.7 1161.5 Q 2728.7 1161.5 2728.7 1156.5 L 2728.7 1147.5 Q 2728.7 1142.5 2723.7 1142.5 L 2694.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="1157.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customer_customer_groups" data-from-col="customergroup_id" data-to="pos_app_customergroup" data-to-col="id"><path d="M 3018.0 1180.5 L 3027.0 1180.5 Q 3032.0 1180.5 3032.0 1185.5 L 3032.0 1367.5 Q 3032.0 1372.5 3027.0 1372.5 L 3018.0 1372.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="3026.0" y="1176.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3026.0" y="1368.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customercard" data-from-col="customer_id" data-to="pos_app_customer" data-to-col="id"><path d="M 2770.0 1295.5 L 2737.0 1295.5 Q 2732.0 1295.5 2732.0 1290.5 L 2732.0 1147.5 Q 2732.0 1142.5 2727.0 1142.5 L 2694.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="1291.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customuser" data-from-col="preferedbranch_id" data-to="pos_app_branch" data-to-col="branchid"><path d="M 3094.0 2190.5 L 3051.0 2190.5 Q 3046.0 2190.5 3046.0 2185.5 L 3046.0 1106.5 Q 3046.0 1101.5 3041.0 1101.5 L 362.3 1101.5 Q 357.3 1101.5 357.3 1096.5 L 357.3 177.5 Q 357.3 172.5 352.3 172.5 L 326.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="3080.0" y="2186.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customuser_groups" data-from-col="customuser_id" data-to="pos_app_customuser" data-to-col="id"><path d="M 3018.0 2058.5 L 3031.0 2058.5 Q 3036.0 2058.5 3036.0 2053.5 L 3036.0 1929.5 Q 3036.0 1924.5 3041.0 1924.5 L 3094.0 1924.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="3026.0" y="2054.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1920.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customuser_groups" data-from-col="group_id" data-to="auth_group" data-to-col="id"><path d="M 2770.0 2077.5 L 2740.3 2077.5 Q 2735.3 2077.5 2735.3 2082.5 L 2735.3 2148.5 Q 2735.3 2153.5 2730.3 2153.5 L 2694.0 2153.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="2073.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="2149.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customuser_user_permissions" data-from-col="customuser_id" data-to="pos_app_customuser" data-to-col="id"><path d="M 3018.0 1943.5 L 3039.0 1943.5 Q 3044.0 1943.5 3044.0 1938.5 L 3044.0 1929.5 Q 3044.0 1924.5 3049.0 1924.5 L 3094.0 1924.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="3026.0" y="1939.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1920.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_customuser_user_permissions" data-from-col="permission_id" data-to="auth_permission" data-to-col="id"><path d="M 2770.0 1962.5 L 2743.7 1962.5 Q 2738.7 1962.5 2738.7 1957.5 L 2738.7 1814.5 Q 2738.7 1809.5 2733.7 1809.5 L 2694.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="1958.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_datamapping" data-from-col="connection_id" data-to="pos_app_odbcconnection" data-to-col="id"><path d="M 326.0 1942.5 L 355.0 1942.5 Q 360.0 1942.5 360.0 1947.5 L 360.0 2262.5 Q 360.0 2267.5 365.0 2267.5 L 402.0 2267.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="1938.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="390.0" y="2263.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_datamappingrun" data-from-col="mapping_id" data-to="pos_app_datamapping" data-to-col="id"><path d="M 402.0 1942.5 L 367.7 1942.5 Q 362.7 1942.5 362.7 1937.5 L 362.7 1814.5 Q 362.7 1809.5 357.7 1809.5 L 326.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="388.0" y="1938.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_datamappingschedule" data-from-col="mapping_id" data-to="pos_app_datamapping" data-to-col="id"><path d="M 326.0 2228.5 L 342.0 2228.5 Q 347.0 2228.5 347.0 2223.5 L 347.0 1814.5 Q 347.0 1809.5 342.0 1809.5 L 326.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="334.0" y="2224.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlist" data-from-col="discount_id" data-to="pos_app_discount" data-to-col="id"><path d="M 1348.0 1256.5 L 1361.0 1256.5 Q 1366.0 1256.5 1366.0 1251.5 L 1366.0 1204.5 Q 1366.0 1199.5 1371.0 1199.5 L 2049.0 1199.5 Q 2054.0 1199.5 2054.0 1194.5 L 2054.0 1147.5 Q 2054.0 1142.5 2059.0 1142.5 L 2072.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="1252.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlist_customer_groups" data-from-col="customergroup_id" data-to="pos_app_customergroup" data-to-col="id"><path d="M 1672.0 1295.5 L 1685.0 1295.5 Q 1690.0 1295.5 1690.0 1290.5 L 1690.0 1109.0 Q 1690.0 1104.0 1695.0 1104.0 L 2747.0 1104.0 Q 2752.0 1104.0 2752.0 1109.0 L 2752.0 1367.5 Q 2752.0 1372.5 2757.0 1372.5 L 2770.0 1372.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="1291.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2758.0" y="1368.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlist_customer_groups" data-from-col="discountlist_id" data-to="pos_app_discountlist" data-to-col="id"><path d="M 1424.0 1276.5 L 1373.5 1276.5 Q 1368.5 1276.5 1368.5 1271.5 L 1368.5 1147.5 Q 1368.5 1142.5 1363.5 1142.5 L 1348.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1410.0" y="1272.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistarea" data-from-col="branch_id" data-to="pos_app_branch" data-to-col="branchid"><path d="M 1748.0 1276.5 L 1723.0 1276.5 Q 1718.0 1276.5 1718.0 1271.5 L 1718.0 999.5 Q 1718.0 994.5 1713.0 994.5 L 370.3 994.5 Q 365.3 994.5 365.3 989.5 L 365.3 177.5 Q 365.3 172.5 360.3 172.5 L 326.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="1272.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistarea" data-from-col="discount_list_id" data-to="pos_app_discountlist" data-to-col="id"><path d="M 1748.0 1295.5 L 1723.0 1295.5 Q 1718.0 1295.5 1718.0 1290.5 L 1718.0 1224.0 Q 1718.0 1219.0 1713.0 1219.0 L 1376.0 1219.0 Q 1371.0 1219.0 1371.0 1214.0 L 1371.0 1147.5 Q 1371.0 1142.5 1366.0 1142.5 L 1348.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="1291.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistarea" data-from-col="tenant_id" data-to="pos_app_tenant" data-to-col="tenantid"><path d="M 1748.0 1314.5 L 1729.0 1314.5 Q 1724.0 1314.5 1724.0 1309.5 L 1724.0 848.5 Q 1724.0 843.5 1719.0 843.5 L 1005.0 843.5 Q 1000.0 843.5 1000.0 838.5 L 1000.0 177.5 Q 1000.0 172.5 995.0 172.5 L 974.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="1310.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="982.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistproduct" data-from-col="discount_list_id" data-to="pos_app_discountlist" data-to-col="id"><path d="M 1424.0 1161.5 L 1378.5 1161.5 Q 1373.5 1161.5 1373.5 1156.5 L 1373.5 1147.5 Q 1373.5 1142.5 1368.5 1142.5 L 1348.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1410.0" y="1157.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistproduct" data-from-col="product_id" data-to="pos_app_product" data-to-col="id"><path d="M 1672.0 1180.5 L 1690.0 1180.5 Q 1695.0 1180.5 1695.0 1185.5 L 1695.0 1212.5 Q 1695.0 1217.5 1700.0 1217.5 L 2043.0 1217.5 Q 2048.0 1217.5 2048.0 1222.5 L 2048.0 1309.5 Q 2048.0 1314.5 2053.0 1314.5 L 2072.0 1314.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="1176.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1310.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistproductgroup" data-from-col="discount_list_id" data-to="pos_app_discountlist" data-to-col="id"><path d="M 1748.0 1161.5 L 1711.0 1161.5 Q 1706.0 1161.5 1706.0 1156.5 L 1706.0 1107.0 Q 1706.0 1102.0 1701.0 1102.0 L 1381.0 1102.0 Q 1376.0 1102.0 1376.0 1107.0 L 1376.0 1137.5 Q 1376.0 1142.5 1371.0 1142.5 L 1348.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="1157.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_discountlistproductgroup" data-from-col="product_group_id" data-to="pos_app_productgroup" data-to-col="id"><path d="M 1996.0 1180.5 L 2009.0 1180.5 Q 2014.0 1180.5 2014.0 1185.5 L 2014.0 1462.5 Q 2014.0 1467.5 2019.0 1467.5 L 2072.0 1467.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2004.0" y="1176.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1463.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_ecr" data-from-col="branchid" data-to="pos_app_branch" data-to-col="branchid"><path d="M 402.0 553.5 L 373.0 553.5 Q 368.0 553.5 368.0 548.5 L 368.0 177.5 Q 368.0 172.5 363.0 172.5 L 326.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="388.0" y="549.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_fieldmapping" data-from-col="mapping_id" data-to="pos_app_datamapping" data-to-col="id"><path d="M 402.0 2190.5 L 375.7 2190.5 Q 370.7 2190.5 370.7 2185.5 L 370.7 1814.5 Q 370.7 1809.5 365.7 1809.5 L 326.0 1809.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="388.0" y="2186.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="1805.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_paymenttype" data-from-col="payment_method_id" data-to="pos_app_paymentmethod" data-to-col="id"><path d="M 1748.0 649.5 L 1705.0 649.5 Q 1700.0 649.5 1700.0 644.5 L 1700.0 578.5 Q 1700.0 573.5 1695.0 573.5 L 1672.0 573.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="645.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1680.0" y="569.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_product" data-from-col="product_tax_group_id" data-to="pos_app_producttaxgroup" data-to-col="id"><path d="M 2072.0 1390.5 L 2041.0 1390.5 Q 2036.0 1390.5 2036.0 1385.5 L 2036.0 1356.5 Q 2036.0 1351.5 2031.0 1351.5 L 1710.0 1351.5 Q 1705.0 1351.5 1705.0 1356.5 L 1705.0 1367.5 Q 1705.0 1372.5 1700.0 1372.5 L 1672.0 1372.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2058.0" y="1386.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1680.0" y="1368.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_product_product_groups" data-from-col="product_id" data-to="pos_app_product" data-to-col="id"><path d="M 1348.0 1352.5 L 1373.5 1352.5 Q 1378.5 1352.5 1378.5 1347.5 L 1378.5 1338.5 Q 1378.5 1333.5 1383.5 1333.5 L 2019.0 1333.5 Q 2024.0 1333.5 2024.0 1328.5 L 2024.0 1319.5 Q 2024.0 1314.5 2029.0 1314.5 L 2072.0 1314.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="1348.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1310.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_product_product_groups" data-from-col="productgroup_id" data-to="pos_app_productgroup" data-to-col="id"><path d="M 1348.0 1371.5 L 1376.0 1371.5 Q 1381.0 1371.5 1381.0 1366.5 L 1381.0 1224.5 Q 1381.0 1219.5 1386.0 1219.5 L 2049.0 1219.5 Q 2054.0 1219.5 2054.0 1224.5 L 2054.0 1462.5 Q 2054.0 1467.5 2059.0 1467.5 L 2072.0 1467.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="1367.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1463.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_productbarcode" data-from-col="product_id" data-to="pos_app_product" data-to-col="id"><path d="M 1996.0 1448.5 L 2017.0 1448.5 Q 2022.0 1448.5 2022.0 1443.5 L 2022.0 1319.5 Q 2022.0 1314.5 2027.0 1314.5 L 2072.0 1314.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2004.0" y="1444.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1310.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_productprice" data-from-col="currency_code_id" data-to="pos_app_currency" data-to-col="code"><path d="M 1100.0 1486.5 L 1057.0 1486.5 Q 1052.0 1486.5 1052.0 1481.5 L 1052.0 1053.5 Q 1052.0 1048.5 1047.0 1048.5 L 378.3 1048.5 Q 373.3 1048.5 373.3 1043.5 L 373.3 615.5 Q 373.3 610.5 368.3 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1086.0" y="1482.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_productprice" data-from-col="product_id" data-to="pos_app_product" data-to-col="id"><path d="M 1348.0 1505.5 L 1378.5 1505.5 Q 1383.5 1505.5 1383.5 1500.5 L 1383.5 1215.0 Q 1383.5 1210.0 1388.5 1210.0 L 2043.0 1210.0 Q 2048.0 1210.0 2048.0 1215.0 L 2048.0 1309.5 Q 2048.0 1314.5 2053.0 1314.5 L 2072.0 1314.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="1501.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1310.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="currency_code_id" data-to="pos_app_currency" data-to-col="code"><path d="M 1100.0 476.5 L 1087.0 476.5 Q 1082.0 476.5 1082.0 481.5 L 1082.0 798.5 Q 1082.0 803.5 1077.0 803.5 L 381.0 803.5 Q 376.0 803.5 376.0 798.5 L 376.0 615.5 Q 376.0 610.5 371.0 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1086.0" y="472.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="customer_id" data-to="pos_app_customer" data-to-col="id"><path d="M 1348.0 495.5 L 1381.0 495.5 Q 1386.0 495.5 1386.0 500.5 L 1386.0 834.0 Q 1386.0 839.0 1391.0 839.0 L 2411.0 839.0 Q 2416.0 839.0 2416.0 844.0 L 2416.0 1137.5 Q 2416.0 1142.5 2421.0 1142.5 L 2446.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="491.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2434.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="ecrid" data-to="pos_app_ecr" data-to-col="ecrid"><path d="M 1100.0 514.5 L 1081.0 514.5 Q 1076.0 514.5 1076.0 519.5 L 1076.0 566.0 Q 1076.0 571.0 1071.0 571.0 L 681.0 571.0 Q 676.0 571.0 676.0 566.0 L 676.0 292.5 Q 676.0 287.5 671.0 287.5 L 650.0 287.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1086.0" y="510.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="658.0" y="283.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="receipt_type_id" data-to="pos_app_receipttype" data-to-col="id"><path d="M 1348.0 571.5 L 1383.5 571.5 Q 1388.5 571.5 1388.5 566.5 L 1388.5 482.5 Q 1388.5 477.5 1393.5 477.5 L 1424.0 477.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="567.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1412.0" y="473.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="userid" data-to="pos_app_customuser" data-to-col="id"><path d="M 1348.0 533.5 L 1386.0 533.5 Q 1391.0 533.5 1391.0 538.5 L 1391.0 1094.0 Q 1391.0 1099.0 1396.0 1099.0 L 3047.0 1099.0 Q 3052.0 1099.0 3052.0 1104.0 L 3052.0 1919.5 Q 3052.0 1924.5 3057.0 1924.5 L 3094.0 1924.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="529.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1920.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receipt" data-from-col="z_report_id" data-to="pos_app_report" data-to-col="id"><path d="M 1348.0 552.5 L 1388.5 552.5 Q 1393.5 552.5 1393.5 547.5 L 1393.5 517.5 Q 1393.5 512.5 1398.5 512.5 L 2393.0 512.5 Q 2398.0 512.5 2398.0 507.5 L 2398.0 177.5 Q 2398.0 172.5 2403.0 172.5 L 2446.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="548.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2434.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptdiscount" data-from-col="discount_id" data-to="pos_app_discount" data-to-col="id"><path d="M 1996.0 477.5 L 2025.0 477.5 Q 2030.0 477.5 2030.0 482.5 L 2030.0 1137.5 Q 2030.0 1142.5 2035.0 1142.5 L 2072.0 1142.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2004.0" y="473.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1138.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptdiscount" data-from-col="receipt_id" data-to="pos_app_receipt" data-to-col="id"><path d="M 1748.0 496.5 L 1735.0 496.5 Q 1730.0 496.5 1730.0 491.5 L 1730.0 429.5 Q 1730.0 424.5 1725.0 424.5 L 1401.0 424.5 Q 1396.0 424.5 1396.0 419.5 L 1396.0 177.5 Q 1396.0 172.5 1391.0 172.5 L 1348.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="492.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptitem" data-from-col="product_id" data-to="pos_app_product" data-to-col="id"><path d="M 1672.0 381.5 L 1705.0 381.5 Q 1710.0 381.5 1710.0 386.5 L 1710.0 843.0 Q 1710.0 848.0 1715.0 848.0 L 2025.0 848.0 Q 2030.0 848.0 2030.0 853.0 L 2030.0 1309.5 Q 2030.0 1314.5 2035.0 1314.5 L 2072.0 1314.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="377.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1310.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptitem" data-from-col="receipt_id" data-to="pos_app_receipt" data-to-col="id"><path d="M 1424.0 400.5 L 1403.5 400.5 Q 1398.5 400.5 1398.5 395.5 L 1398.5 177.5 Q 1398.5 172.5 1393.5 172.5 L 1348.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1410.0" y="396.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptitemdiscount" data-from-col="discount_type_id" data-to="pos_app_discounttype" data-to-col="id"><path d="M 1672.0 802.5 L 1710.0 802.5 Q 1715.0 802.5 1715.0 807.5 L 1715.0 1197.5 Q 1715.0 1202.5 1720.0 1202.5 L 2019.0 1202.5 Q 2024.0 1202.5 2024.0 1207.5 L 2024.0 1577.5 Q 2024.0 1582.5 2029.0 1582.5 L 2072.0 1582.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="798.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2060.0" y="1578.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptitemdiscount" data-from-col="receipt_item_id" data-to="pos_app_receiptitem" data-to-col="id"><path d="M 1672.0 821.5 L 1681.0 821.5 Q 1686.0 821.5 1686.0 816.5 L 1686.0 177.5 Q 1686.0 172.5 1681.0 172.5 L 1672.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="817.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1680.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptpayment" data-from-col="payment_type_id" data-to="pos_app_paymenttype" data-to-col="id"><path d="M 1996.0 305.5 L 2005.0 305.5 Q 2010.0 305.5 2010.0 310.5 L 2010.0 568.5 Q 2010.0 573.5 2005.0 573.5 L 1996.0 573.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2004.0" y="301.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2004.0" y="569.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_receiptpayment" data-from-col="receipt_id" data-to="pos_app_receipt" data-to-col="id"><path d="M 1748.0 324.5 L 1723.0 324.5 Q 1718.0 324.5 1718.0 319.5 L 1718.0 133.5 Q 1718.0 128.5 1713.0 128.5 L 1406.0 128.5 Q 1401.0 128.5 1401.0 133.5 L 1401.0 167.5 Q 1401.0 172.5 1396.0 172.5 L 1348.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1734.0" y="320.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1356.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_report" data-from-col="branch_id" data-to="pos_app_branch" data-to-col="branchid"><path d="M 2446.0 381.5 L 2427.0 381.5 Q 2422.0 381.5 2422.0 376.5 L 2422.0 132.0 Q 2422.0 127.0 2417.0 127.0 L 383.7 127.0 Q 378.7 127.0 378.7 132.0 L 378.7 167.5 Q 378.7 172.5 373.7 172.5 L 326.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="377.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_report" data-from-col="ecr_id" data-to="pos_app_ecr" data-to-col="ecrid"><path d="M 2446.0 400.5 L 2421.0 400.5 Q 2416.0 400.5 2416.0 395.5 L 2416.0 139.0 Q 2416.0 134.0 2411.0 134.0 L 689.0 134.0 Q 684.0 134.0 684.0 139.0 L 684.0 282.5 Q 684.0 287.5 679.0 287.5 L 650.0 287.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="396.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="658.0" y="283.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_report" data-from-col="tenant_id" data-to="pos_app_tenant" data-to-col="tenantid"><path d="M 2446.0 419.5 L 2421.0 419.5 Q 2416.0 419.5 2416.0 414.5 L 2416.0 131.0 Q 2416.0 126.0 2411.0 126.0 L 1013.0 126.0 Q 1008.0 126.0 1008.0 131.0 L 1008.0 167.5 Q 1008.0 172.5 1003.0 172.5 L 974.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2432.0" y="415.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="982.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_report" data-from-col="user_id" data-to="pos_app_customuser" data-to-col="id"><path d="M 2694.0 438.5 L 2737.0 438.5 Q 2742.0 438.5 2742.0 443.5 L 2742.0 1196.5 Q 2742.0 1201.5 2747.0 1201.5 L 3053.0 1201.5 Q 3058.0 1201.5 3058.0 1206.5 L 3058.0 1919.5 Q 3058.0 1924.5 3063.0 1924.5 L 3094.0 1924.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2702.0" y="434.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="3082.0" y="1920.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_reportpayment" data-from-col="payment_type_id" data-to="pos_app_paymenttype" data-to-col="id"><path d="M 2770.0 267.5 L 2739.0 267.5 Q 2734.0 267.5 2734.0 272.5 L 2734.0 515.5 Q 2734.0 520.5 2729.0 520.5 L 2043.0 520.5 Q 2038.0 520.5 2038.0 525.5 L 2038.0 568.5 Q 2038.0 573.5 2033.0 573.5 L 1996.0 573.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="263.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2004.0" y="569.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_reportpayment" data-from-col="report_id" data-to="pos_app_report" data-to-col="id"><path d="M 2770.0 286.5 L 2750.3 286.5 Q 2745.3 286.5 2745.3 281.5 L 2745.3 177.5 Q 2745.3 172.5 2740.3 172.5 L 2694.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="282.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_reporttaxrate" data-from-col="report_id" data-to="pos_app_report" data-to-col="id"><path d="M 2770.0 477.5 L 2753.7 477.5 Q 2748.7 477.5 2748.7 472.5 L 2748.7 177.5 Q 2748.7 172.5 2743.7 172.5 L 2694.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="2756.0" y="473.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2702.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_retourpaymenttype" data-from-col="payment_method_id" data-to="pos_app_paymentmethod" data-to-col="id"><path d="M 1348.0 743.5 L 1398.5 743.5 Q 1403.5 743.5 1403.5 738.5 L 1403.5 578.5 Q 1403.5 573.5 1408.5 573.5 L 1424.0 573.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1356.0" y="739.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1412.0" y="569.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_systempreference" data-from-col="default_currency_id" data-to="pos_app_currency" data-to-col="code"><path d="M 402.0 763.5 L 386.3 763.5 Q 381.3 763.5 381.3 758.5 L 381.3 615.5 Q 381.3 610.5 376.3 610.5 L 326.0 610.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="388.0" y="759.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="334.0" y="606.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_systempreference" data-from-col="default_language_id" data-to="pos_app_language" data-to-col="id"><path d="M 650.0 782.5 L 659.0 782.5 Q 664.0 782.5 664.0 777.5 L 664.0 177.5 Q 664.0 172.5 659.0 172.5 L 650.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="658.0" y="778.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="658.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_taxmapping" data-from-col="country_id" data-to="pos_app_country" data-to-col="id"><path d="M 1424.0 1487.5 L 1393.0 1487.5 Q 1388.0 1487.5 1388.0 1482.5 L 1388.0 1063.5 Q 1388.0 1058.5 1383.0 1058.5 L 1021.0 1058.5 Q 1016.0 1058.5 1016.0 1053.5 L 1016.0 634.5 Q 1016.0 629.5 1011.0 629.5 L 974.0 629.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1410.0" y="1483.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="982.0" y="625.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_taxmapping" data-from-col="customer_tax_group_id" data-to="pos_app_customertaxgroup" data-to-col="id"><path d="M 1672.0 1506.5 L 1715.0 1506.5 Q 1720.0 1506.5 1720.0 1511.5 L 1720.0 1654.0 Q 1720.0 1659.0 1725.0 1659.0 L 2423.0 1659.0 Q 2428.0 1659.0 2428.0 1654.0 L 2428.0 1376.5 Q 2428.0 1371.5 2433.0 1371.5 L 2446.0 1371.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="1502.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="2434.0" y="1367.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_taxmapping" data-from-col="product_tax_group_id" data-to="pos_app_producttaxgroup" data-to-col="id"><path d="M 1672.0 1525.5 L 1688.0 1525.5 Q 1693.0 1525.5 1693.0 1520.5 L 1693.0 1377.5 Q 1693.0 1372.5 1688.0 1372.5 L 1672.0 1372.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="1521.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1680.0" y="1368.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_taxmapping" data-from-col="tax_rate_id" data-to="pos_app_taxrate" data-to-col="id"><path d="M 1672.0 1544.5 L 1720.0 1544.5 Q 1725.0 1544.5 1725.0 1539.5 L 1725.0 1530.5 Q 1725.0 1525.5 1730.0 1525.5 L 1748.0 1525.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="1680.0" y="1540.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="1736.0" y="1521.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_tenant" data-from-col="country_id" data-to="pos_app_country" data-to-col="id"><path d="M 974.0 495.5 L 983.0 495.5 Q 988.0 495.5 988.0 500.5 L 988.0 624.5 Q 988.0 629.5 983.0 629.5 L 974.0 629.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="982.0" y="491.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="982.0" y="625.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+    <g class="er-edge" data-from="pos_app_tenant" data-from-col="language_id" data-to="pos_app_language" data-to-col="id"><path d="M 726.0 514.5 L 697.0 514.5 Q 692.0 514.5 692.0 509.5 L 692.0 177.5 Q 692.0 172.5 687.0 172.5 L 650.0 172.5" fill="none" stroke="#64748B" stroke-width="1.4" stroke-linejoin="round" class="edge-line"/><text x="712.0" y="510.5" font-size="10.5" font-weight="700" fill="#334155" class="edge-card">∞</text><text x="658.0" y="168.5" font-size="10" font-weight="700" fill="#1E4E8C" class="edge-card">1</text></g>
+  </g>
+  <g id="tables-layer">
+    <g class="er-table" id="tbl-auth_group" data-table="auth_group" data-sys="true" transform="translate(2446.0, 2118.0)">
+      <rect x="0" y="0" width="248" height="68" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">auth_group</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(150)</text>
+    </g>
+    <g class="er-table" id="tbl-auth_group_permissions" data-table="auth_group_permissions" data-sys="true" transform="translate(2770.0, 1774.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">auth_group_permissions</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">group_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">permission_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-auth_permission" data-table="auth_permission" data-sys="true" transform="translate(2446.0, 1774.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">auth_permission</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">content_type_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">codename</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+    </g>
+    <g class="er-table" id="tbl-django_admin_log" data-table="django_admin_log" data-sys="true" transform="translate(2446.0, 1908.0)">
+      <rect x="0" y="0" width="248" height="182" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">django_admin_log</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">action_time</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">object_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">object_repr</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">action_flag</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int2</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">change_message</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">content_type_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">user_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-django_content_type" data-table="django_content_type" data-sys="true" transform="translate(3094.0, 1774.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">django_content_type</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">app_label</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">model</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+    </g>
+    <g class="er-table" id="tbl-django_migrations" data-table="django_migrations" data-sys="true" transform="translate(2770.0, 2119.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">django_migrations</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">app</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">applied</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+    </g>
+    <g class="er-table" id="tbl-django_session" data-table="django_session" data-sys="true" transform="translate(2446.0, 2214.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad-sys)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">django_session</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">session_key</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(40)</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">session_data</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">expire_date</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_barcodeprefix" data-table="pos_app_barcodeprefix" data-sys="false" transform="translate(1100.0, 1547.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_barcodeprefix</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">prefix</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">prefix_type</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">description</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_branch" data-table="pos_app_branch" data-sys="false" transform="translate(78.0, 137.0)">
+      <rect x="0" y="0" width="248" height="410" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_branch</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">branchid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">branchnr</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">branch_number</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">branchname</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">branchdescription</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">receipthead</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">receiptfoot</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">receiptlogo</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">dashboardlogo</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_printer</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">print_receipt_direct</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">open_cash_drawer_direct</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_cashdrawer</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_linedisplay</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E293B">use_client_monitor</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">use_eft_terminal</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <use href="#fk-icon" x="5" y="334"/>
+      <text x="23" y="343.5" font-size="10.5" font-weight="400" fill="#1E40AF">language_id</text>
+      <text x="241" y="343.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="349" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="353"/>
+      <text x="23" y="362.5" font-size="10.5" font-weight="400" fill="#1E40AF">branchtenantid</text>
+      <text x="241" y="362.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="381.5" font-size="10.5" font-weight="400" fill="#1E293B">logout_countdown</text>
+      <text x="241" y="381.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="387" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="400.5" font-size="10.5" font-weight="400" fill="#1E293B">max_manual_discount_pe…</text>
+      <text x="241" y="400.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_button" data-table="pos_app_button" data-sys="false" transform="translate(78.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="201" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_button</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">buttonid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantid</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">branchid</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">parentlayerid</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">layerid</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">buttonnr</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">scantext</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">description</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <use href="#fk-icon" x="5" y="182"/>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E40AF">colorid</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_buttoncolor" data-table="pos_app_buttoncolor" data-sys="false" transform="translate(402.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_buttoncolor</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">colorid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">colorname</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">colorcss</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_buttonlayer" data-table="pos_app_buttonlayer" data-sys="false" transform="translate(402.0, 1222.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_buttonlayer</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">layerid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">stayafterclick</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">stayaftersell</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_country" data-table="pos_app_country" data-sys="false" transform="translate(726.0, 594.0)">
+      <rect x="0" y="0" width="248" height="201" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_country</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">iso_code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(2)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">price_type</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_calculation_level</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(15)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">rounding_rule</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_rounding_rule</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">default_currency_code_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">apply_rounding_to_tax</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_currency" data-table="pos_app_currency" data-sys="false" transform="translate(78.0, 575.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_currency</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">code</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">symbol</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(4)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">decimal_places</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">cash_rounding_step</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">electronic_rounding_step</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_currencydenomination" data-table="pos_app_currencydenomination" data-sys="false" transform="translate(78.0, 728.0)">
+      <rect x="0" y="0" width="248" height="144" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_currencydenomination</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">value</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">is_coin</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">image_path</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">sort_order</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="125"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E40AF">currency_id</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customer" data-table="pos_app_customer" data-sys="false" transform="translate(2446.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="201" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customer</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">customer_number</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">company_name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">first_name</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">last_name</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="125"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E40AF">country_id</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">default_currency_code_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">customer_tax_group_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="182"/>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E40AF">language_id</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customer_customer_groups" data-table="pos_app_customer_customer_groups" data-sys="false" transform="translate(2770.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customer_customer_groups</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">customer_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">customergroup_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customercard" data-table="pos_app_customercard" data-sys="false" transform="translate(2770.0, 1222.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customercard</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">cardbarcode</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">customer_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customergroup" data-table="pos_app_customergroup" data-sys="false" transform="translate(2770.0, 1337.0)">
+      <rect x="0" y="0" width="248" height="68" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customergroup</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customertaxgroup" data-table="pos_app_customertaxgroup" data-sys="false" transform="translate(2446.0, 1336.0)">
+      <rect x="0" y="0" width="248" height="68" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customertaxgroup</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customuser" data-table="pos_app_customuser" data-sys="false" transform="translate(3094.0, 1889.0)">
+      <rect x="0" y="0" width="248" height="391" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customuser</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">password</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(128)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">last_login</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">is_superuser</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">username</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(150)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">first_name</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(150)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">last_name</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(150)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">email</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(254)</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">is_staff</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">date_joined</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">usernr</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">batchnr</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E293B">is_poweruser</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <use href="#fk-icon" x="5" y="296"/>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E40AF">preferedbranch_id</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">pin</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(128)</text>
+      <text x="23" y="343.5" font-size="10.5" font-weight="400" fill="#1E293B">can_change_hardware_se…</text>
+      <text x="241" y="343.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="349" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="362.5" font-size="10.5" font-weight="400" fill="#1E293B">can_run_z_report</text>
+      <text x="241" y="362.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="381.5" font-size="10.5" font-weight="400" fill="#1E293B">theme</text>
+      <text x="241" y="381.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customuser_groups" data-table="pos_app_customuser_groups" data-sys="false" transform="translate(2770.0, 2004.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customuser_groups</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">customuser_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">group_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_customuser_user_permissions" data-table="pos_app_customuser_user_permissions" data-sys="false" transform="translate(2770.0, 1889.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_customuser_user_permissions</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">customuser_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">permission_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_datamapping" data-table="pos_app_datamapping" data-sys="false" transform="translate(78.0, 1774.0)">
+      <rect x="0" y="0" width="248" height="182" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_datamapping</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">direction</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(6)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">table_links_json</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">jsonb</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">created_at</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">updated_at</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">connection_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_datamappingrun" data-table="pos_app_datamappingrun" data-sys="false" transform="translate(402.0, 1774.0)">
+      <rect x="0" y="0" width="248" height="182" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_datamappingrun</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">status</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">started_at</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">finished_at</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">rows_processed</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">rows_errors</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">log_text</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">mapping_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_datamappingschedule" data-table="pos_app_datamappingschedule" data-sys="false" transform="translate(78.0, 1984.0)">
+      <rect x="0" y="0" width="248" height="258" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_datamappingschedule</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">interval</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">time_of_day</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">time without time zone</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">weekday</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">day_of_month</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">once_date</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">date</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">next_run</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">last_run</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">created_at</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="239"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E40AF">mapping_id</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_debuglogconfig" data-table="pos_app_debuglogconfig" data-sys="false" transform="translate(78.0, 1336.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_debuglogconfig</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">area</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">log_retention_days</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discount" data-table="pos_app_discount" data-sys="false" transform="translate(2072.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="144" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discount</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">discount_type</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">value</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">priority</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discountlist" data-table="pos_app_discountlist" data-sys="false" transform="translate(1100.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="163" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discountlist</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">valid_from</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">date</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">valid_to</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">date</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">priority</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discountlist_customer_groups" data-table="pos_app_discountlist_customer_groups" data-sys="false" transform="translate(1424.0, 1222.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discountlist_customer_groups</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">discountlist_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">customergroup_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discountlistarea" data-table="pos_app_discountlistarea" data-sys="false" transform="translate(1748.0, 1222.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discountlistarea</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">branch_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_list_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="87"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E40AF">tenant_id</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discountlistproduct" data-table="pos_app_discountlistproduct" data-sys="false" transform="translate(1424.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discountlistproduct</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_list_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discountlistproductgroup" data-table="pos_app_discountlistproductgroup" data-sys="false" transform="translate(1748.0, 1107.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discountlistproductgroup</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_list_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_group_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_discounttype" data-table="pos_app_discounttype" data-sys="false" transform="translate(2072.0, 1547.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_discounttype</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">calculation_priority</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_ecr" data-table="pos_app_ecr" data-sys="false" transform="translate(402.0, 252.0)">
+      <rect x="0" y="0" width="248" height="334" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_ecr</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">ecrid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">ecrnr</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">ecr_number</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">ecrname</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">ecrdescription</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">eft_identifier</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">eft_identifier_timestamp</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_printer</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">print_receipt_direct</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">open_cash_drawer_direct</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_cashdrawer</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_linedisplay</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">use_client_monitor</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E293B">use_eft_terminal</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <use href="#fk-icon" x="5" y="296"/>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E40AF">branchid</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">installed_client_version</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_ecrsequence" data-table="pos_app_ecrsequence" data-sys="false" transform="translate(726.0, 823.0)">
+      <rect x="0" y="0" width="248" height="163" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_ecrsequence</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantid</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">branchid</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">ecrid</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">last_sequence</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">last_z_sequence</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">last_tx_sequence</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_fieldmapping" data-table="pos_app_fieldmapping" data-sys="false" transform="translate(402.0, 1984.0)">
+      <rect x="0" y="0" width="248" height="220" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_fieldmapping</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">sort_order</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">source_table</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">source_field</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">target_table</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">target_field</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">aggregate_function</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">transform_expression</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">default_value</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="201"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E40AF">mapping_id</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_function" data-table="pos_app_function" data-sys="false" transform="translate(402.0, 1337.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_function</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">functionid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">functionname</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">scantext</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">noscan</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">description</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_language" data-table="pos_app_language" data-sys="false" transform="translate(402.0, 137.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_language</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(5)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_odbcconnection" data-table="pos_app_odbcconnection" data-sys="false" transform="translate(402.0, 2232.0)">
+      <rect x="0" y="0" width="248" height="277" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_odbcconnection</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">driver</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">server</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">database</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">username</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">password</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(200)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">connection_string_over…</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">is_active</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">created_at</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">updated_at</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">last_test_at</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">last_test_ok</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_paymentmethod" data-table="pos_app_paymentmethod" data-sys="false" transform="translate(1424.0, 538.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_paymentmethod</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">is_cash</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_paymenttype" data-table="pos_app_paymenttype" data-sys="false" transform="translate(1748.0, 538.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_paymenttype</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">paymenttype_number</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="106"/>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E40AF">payment_method_id</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_product" data-table="pos_app_product" data-sys="false" transform="translate(2072.0, 1279.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_product</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">product_number</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">is_discountable</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <use href="#fk-icon" x="5" y="106"/>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_tax_group_id</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_product_product_groups" data-table="pos_app_product_product_groups" data-sys="false" transform="translate(1100.0, 1298.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_product_product_groups</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">productgroup_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_productbarcode" data-table="pos_app_productbarcode" data-sys="false" transform="translate(1748.0, 1356.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_productbarcode</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">barcode</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">description</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="87"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_id</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_productgroup" data-table="pos_app_productgroup" data-sys="false" transform="translate(2072.0, 1432.0)">
+      <rect x="0" y="0" width="248" height="87" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_productgroup</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">is_discountable</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_productprice" data-table="pos_app_productprice" data-sys="false" transform="translate(1100.0, 1413.0)">
+      <rect x="0" y="0" width="248" height="106" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_productprice</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">price</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">currency_code_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="87"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_id</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_producttaxgroup" data-table="pos_app_producttaxgroup" data-sys="false" transform="translate(1424.0, 1337.0)">
+      <rect x="0" y="0" width="248" height="68" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_producttaxgroup</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receipt" data-table="pos_app_receipt" data-sys="false" transform="translate(1100.0, 137.0)">
+      <rect x="0" y="0" width="248" height="467" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receipt</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">receipt_number</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">customer_number</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">ecr_number</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">exchange_rate</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_price_type</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_tax_calc_level</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(15)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_rounding_rule</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_tax_rounding_…</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">total_discount_amount</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">total_net</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">total_tax</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">total_gross</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E293B">status</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E293B">receipt_text</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">created_at</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <use href="#fk-icon" x="5" y="334"/>
+      <text x="23" y="343.5" font-size="10.5" font-weight="400" fill="#1E40AF">currency_code_id</text>
+      <text x="241" y="343.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <rect x="1" y="349" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="353"/>
+      <text x="23" y="362.5" font-size="10.5" font-weight="400" fill="#1E40AF">customer_id</text>
+      <text x="241" y="362.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="372"/>
+      <text x="23" y="381.5" font-size="10.5" font-weight="400" fill="#1E40AF">ecrid</text>
+      <text x="241" y="381.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="387" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="391"/>
+      <text x="23" y="400.5" font-size="10.5" font-weight="400" fill="#1E40AF">userid</text>
+      <text x="241" y="400.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="410"/>
+      <text x="23" y="419.5" font-size="10.5" font-weight="400" fill="#1E40AF">z_report_id</text>
+      <text x="241" y="419.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="425" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="429"/>
+      <text x="23" y="438.5" font-size="10.5" font-weight="400" fill="#1E40AF">receipt_type_id</text>
+      <text x="241" y="438.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="457.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_apply_roundin…</text>
+      <text x="241" y="457.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receiptdiscount" data-table="pos_app_receiptdiscount" data-sys="false" transform="translate(1748.0, 366.0)">
+      <rect x="0" y="0" width="248" height="144" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receiptdiscount</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_priority</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">discount_value</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">calculated_amount</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <use href="#fk-icon" x="5" y="106"/>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_id</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="125"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E40AF">receipt_id</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receiptitem" data-table="pos_app_receiptitem" data-sys="false" transform="translate(1424.0, 137.0)">
+      <rect x="0" y="0" width="248" height="277" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receiptitem</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_scanned_barcode</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">quantity</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_product_name</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_price_net</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_price_gross</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">total_discount_amount</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_tax_percentage</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_tax_sign</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(2)</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_amount</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">total_gross</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="239"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_id</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="258"/>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E40AF">receipt_id</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receiptitemdiscount" data-table="pos_app_receiptitemdiscount" data-sys="false" transform="translate(1424.0, 672.0)">
+      <rect x="0" y="0" width="248" height="163" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receiptitemdiscount</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">snapshot_priority</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">discount_scope</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(10)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">discount_value</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">calculated_amount</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="125"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E40AF">discount_type_id</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">receipt_item_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receiptpayment" data-table="pos_app_receiptpayment" data-sys="false" transform="translate(1748.0, 137.0)">
+      <rect x="0" y="0" width="248" height="201" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receiptpayment</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_calculated</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_rounding_delta</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_paid</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">eftresponse</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">paymentname</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">eftref</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">payment_type_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="182"/>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E40AF">receipt_id</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_receipttype" data-table="pos_app_receipttype" data-sys="false" transform="translate(1424.0, 442.0)">
+      <rect x="0" y="0" width="248" height="68" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_receipttype</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_report" data-table="pos_app_report" data-sys="false" transform="translate(2446.0, 137.0)">
+      <rect x="0" y="0" width="248" height="372" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_report</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">report_type</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(1)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">sequence_number</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">transaction_count</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">canceled_count</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">canceled_amount</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">initial_float</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">cash_drops</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">drawer_open_count</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">eft_report_text</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">created_at</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="239"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E40AF">branch_id</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="258"/>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E40AF">ecr_id</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="277"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E40AF">tenant_id</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="296"/>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E40AF">user_id</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">transaction_report_text</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="343.5" font-size="10.5" font-weight="400" fill="#1E293B">closed_at</text>
+      <text x="241" y="343.5" font-size="9.5" fill="#64748B" text-anchor="end">timestamptz</text>
+      <rect x="1" y="349" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="362.5" font-size="10.5" font-weight="400" fill="#1E293B">status</text>
+      <text x="241" y="362.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_reportpayment" data-table="pos_app_reportpayment" data-sys="false" transform="translate(2770.0, 137.0)">
+      <rect x="0" y="0" width="248" height="163" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_reportpayment</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">payment_name_override</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_calculated</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_counted</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_difference</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="125"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E40AF">payment_type_id</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">report_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_reporttaxrate" data-table="pos_app_reporttaxrate" data-sys="false" transform="translate(2770.0, 328.0)">
+      <rect x="0" y="0" width="248" height="163" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_reporttaxrate</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_percentage</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_sign</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(2)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_net</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_tax</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">amount_gross</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">report_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_retourpaymenttype" data-table="pos_app_retourpaymenttype" data-sys="false" transform="translate(1100.0, 632.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_retourpaymenttype</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">code</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">name</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">paymenttype_number</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="106"/>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E40AF">payment_method_id</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_systempreference" data-table="pos_app_systempreference" data-sys="false" transform="translate(402.0, 614.0)">
+      <rect x="0" y="0" width="248" height="182" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_systempreference</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">hardware_webserver_url</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">required_client_version</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">max_manual_discount_pe…</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">default_eft_type</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(20)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">session_timeout_seconds</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <use href="#fk-icon" x="5" y="144"/>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E40AF">default_currency_id</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(3)</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="163"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E40AF">default_language_id</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_taxmapping" data-table="pos_app_taxmapping" data-sys="false" transform="translate(1424.0, 1433.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_taxmapping</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="49"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E40AF">country_id</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="68"/>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E40AF">customer_tax_group_id</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="87"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E40AF">product_tax_group_id</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="106"/>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E40AF">tax_rate_id</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_taxrate" data-table="pos_app_taxrate" data-sys="false" transform="translate(1748.0, 1490.0)">
+      <rect x="0" y="0" width="248" height="125" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_taxrate</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">id</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">percentage</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">tax_sign</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(2)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">valid_from</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">date</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">valid_to</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">date</text>
+    </g>
+    <g class="er-table" id="tbl-pos_app_tenant" data-table="pos_app_tenant" data-sys="false" transform="translate(726.0, 137.0)">
+      <rect x="0" y="0" width="248" height="429" rx="3" ry="3" fill="#FFFFFF" stroke="#7A96B8" stroke-width="1.2"/>
+      <path d="M 0 3 Q 0 0 3 0 L 245 0 Q 248 0 248 3 L 248 26 L 0 26 Z" fill="url(#hdr-grad)"/>
+      <text x="10" y="17" font-size="11.5" font-weight="700" fill="#FFFFFF">pos_app_tenant</text>
+      <use href="#pk-icon" x="5" y="30"/>
+      <text x="23" y="39.5" font-size="10.5" font-weight="700" fill="#0F172A">tenantid</text>
+      <text x="241" y="39.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <rect x="1" y="45" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="58.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantnr</text>
+      <text x="241" y="58.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="77.5" font-size="10.5" font-weight="400" fill="#1E293B">tenant_number</text>
+      <text x="241" y="77.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(50)</text>
+      <rect x="1" y="83" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="96.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantname</text>
+      <text x="241" y="96.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <text x="23" y="115.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantdescription</text>
+      <text x="241" y="115.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(255)</text>
+      <rect x="1" y="121" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="134.5" font-size="10.5" font-weight="400" fill="#1E293B">tenantsteuernr</text>
+      <text x="241" y="134.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="153.5" font-size="10.5" font-weight="400" fill="#1E293B">receipthead</text>
+      <text x="241" y="153.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <rect x="1" y="159" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="172.5" font-size="10.5" font-weight="400" fill="#1E293B">receiptfoot</text>
+      <text x="241" y="172.5" font-size="9.5" fill="#64748B" text-anchor="end">text</text>
+      <text x="23" y="191.5" font-size="10.5" font-weight="400" fill="#1E293B">receiptlogo</text>
+      <text x="241" y="191.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <rect x="1" y="197" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="210.5" font-size="10.5" font-weight="400" fill="#1E293B">dashboardlogo</text>
+      <text x="241" y="210.5" font-size="9.5" fill="#64748B" text-anchor="end">varchar(100)</text>
+      <text x="23" y="229.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_printer</text>
+      <text x="241" y="229.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="235" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="248.5" font-size="10.5" font-weight="400" fill="#1E293B">print_receipt_direct</text>
+      <text x="241" y="248.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="267.5" font-size="10.5" font-weight="400" fill="#1E293B">open_cash_drawer_direct</text>
+      <text x="241" y="267.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="273" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="286.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_cashdrawer</text>
+      <text x="241" y="286.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="305.5" font-size="10.5" font-weight="400" fill="#1E293B">use_opos_linedisplay</text>
+      <text x="241" y="305.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="311" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="324.5" font-size="10.5" font-weight="400" fill="#1E293B">use_client_monitor</text>
+      <text x="241" y="324.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <text x="23" y="343.5" font-size="10.5" font-weight="400" fill="#1E293B">use_eft_terminal</text>
+      <text x="241" y="343.5" font-size="9.5" fill="#64748B" text-anchor="end">bool</text>
+      <rect x="1" y="349" width="246" height="19" fill="#F8FAFC"/>
+      <use href="#fk-icon" x="5" y="353"/>
+      <text x="23" y="362.5" font-size="10.5" font-weight="400" fill="#1E40AF">country_id</text>
+      <text x="241" y="362.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <use href="#fk-icon" x="5" y="372"/>
+      <text x="23" y="381.5" font-size="10.5" font-weight="400" fill="#1E40AF">language_id</text>
+      <text x="241" y="381.5" font-size="9.5" fill="#64748B" text-anchor="end">int8</text>
+      <rect x="1" y="387" width="246" height="19" fill="#F8FAFC"/>
+      <text x="23" y="400.5" font-size="10.5" font-weight="400" fill="#1E293B">logout_countdown</text>
+      <text x="241" y="400.5" font-size="9.5" fill="#64748B" text-anchor="end">int4</text>
+      <text x="23" y="419.5" font-size="10.5" font-weight="400" fill="#1E293B">max_manual_discount_pe…</text>
+      <text x="241" y="419.5" font-size="9.5" fill="#64748B" text-anchor="end">numeric</text>
+    </g>
+  </g>
+</svg>
