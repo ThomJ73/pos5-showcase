@@ -109,8 +109,8 @@
   .cta b{font-size:28px} .cta span{color:var(--muted);font-size:17px}
 
   .note{margin-top:4px;font-size:14.5px;line-height:1.35;color:#c4d0f5;padding-left:12px;border-left:3px solid var(--cyan)}
-  .g4{grid-template-columns:430px 430px!important}
-  .g4 .shot{height:358px!important}
+  .g4{grid-template-columns:430px 430px!important;gap:20px 30px!important}
+  .g4 .shot{height:342px!important}
   .plat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
   .plat div{border-radius:12px;padding:12px 14px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-size:17px;font-weight:700}
   .plat div small{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:2px}
@@ -218,35 +218,72 @@
 <section class="page">
   <header class="top"><div><div class="kicker">GUI · Themes &amp; Workflows</div><h2>Intuitive GUI - <em>Bildschirm unabhängig</em></h2></div><div class="logo">POS5</div></header>
   <div class="grid2 g4">
-    <figure><div class="shot"><img src="img/kasse-light.png" alt="Light Theme"></div><figcaption><b>Light Theme</b> – Standardansicht<div class="note">Land CH, Währung CHF, Betrag wird in 5 Rappen abgerundet (Kulanzrundung)</div></figcaption></figure>
+    <figure><div class="shot"><img src="img/eft-zahlung.png" alt="Light Theme mit EFT-Zahlung" style="object-fit:contain;background:#f5f5f5"></div><figcaption><b>Light Theme</b> – Standardansicht<div class="note">Land CH, Währung CHF, Betrag wird in 5 Rappen abgerundet (Kulanzrundung). EFT-Zahlung im Gange (mit SIX EFT-Simulator)</div></figcaption></figure>
     <figure><div class="shot"><img src="img/kasse-dark.png" alt="Dark Theme" style="object-fit:contain;background:#161616"></div><figcaption><b>Dark Theme</b> – hier Mandant Hamburg<div class="note">Land DE, Währung EUR, Euro-Banknoten und -Münzen. Keine Rundung, cent-genaue Quittung</div></figcaption></figure>
-    <figure><div class="shot"><img src="img/buchungen.png" alt="Buchungen"></div><figcaption><b>Buchungen</b> – Einlage, Abschöpfung, Differenzen</figcaption></figure>
-    <figure><div class="shot"><img src="img/eft-zahlung.png" alt="EFT-Zahlung"></div><figcaption><b>EFT-Zahlung</b> – hier mit Terminal-Simulator</figcaption></figure>
+    <figure><div class="shot"><img src="img/buchungen.png" alt="Buchungen" style="object-fit:contain;background:#fff"></div><figcaption><b>Buchungen</b> – Einlage, Abschöpfung, Differenzen</figcaption></figure>
+    <figure><div class="shot"><img src="img/tagesuebersicht.png" alt="Tagesübersicht" style="object-fit:contain;background:#f4f6f9"></div><figcaption><b>Tagesübersicht</b> – Belege nach Datum &amp; Z-Report filtern, Storno &amp; Nachdruck</figcaption></figure>
   </div>
   <footer class="foot"><span>POS5 · Projektübersicht</span><span>04 / 12</span></footer>
 </section>
 
-<!-- ============ 5 · ADMINISTRATION ============ -->
+<!-- ============ 5 · TAGESABSCHLUSS & ADMINISTRATION ============ -->
 <section class="page">
-  <header class="top"><div><div class="kicker">GUI · Administration</div><h2>Alles im Griff – <em>ohne Code</em></h2></div><div class="logo">POS5</div></header>
+  <header class="top" style="margin-bottom:18px"><div><div class="kicker">GUI · Abschluss &amp; Administration</div><h2>Tagesabschluss &amp; <em>Admin-Übersicht</em></h2></div><div class="logo">POS5</div></header>
   <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:start">
-    <figure><div class="shot" style="height:358px"><img src="img/administration.png" alt="Admin-Übersicht"></div></figure>
+    <figure><div class="shot" style="height:326px;background:#f4f6f9"><img src="img/z-report.png" alt="Tagesabschluss Z-Report" style="object-fit:contain;background:#f4f6f9"></div></figure>
     <div>
-    <h3 style="font-size:22px;margin-bottom:12px">Admin-Übersicht</h3>
-    <ul class="pts" style="margin-top:4px">
-      <li>Unternehmensübersicht <span>Mandanten, Filialen, Kassen</span></li>
-      <li>Rabatt-Kampagnen <span>Zeitraum, Produkte, Gruppen</span></li>
-      <li>Benutzerverwaltung <span>Rollen &amp; Rechte</span></li>
-      <li>DataBridge <span>Import / Export via ODBC</span></li>
-      <li>System-Logging <span>Server, Django, PostgreSQL</span></li>
-      <li>Erweiterte Verwaltung <span>Django Tabellenverwaltung für Administratoren</span></li>
-    </ul>
+      <h3 style="font-size:21px;margin-bottom:8px">Tagesabschluss (Z-Report)</h3>
+      <ul class="pts" style="margin-top:2px">
+        <li style="font-size:17px;margin-bottom:6px">Soll-/Ist-Abgleich <span>Zahlmittel übersichtlich gegenübergestellt</span></li>
+        <li style="font-size:17px;margin-bottom:6px">Zählung per Stückelung <span>Banknoten &amp; Münzen oder Direkteingabe</span></li>
+        <li style="font-size:17px;margin-bottom:6px">EFT-Tagesabschluss <span>Terminal-Abschluss direkt per Klick abrufen</span></li>
+        <li style="font-size:17px;margin-bottom:6px">Abschöpfung &amp; Buchungen <span>direkt aus dem Abschluss heraus buchbar</span></li>
+        <li style="font-size:17px;margin-bottom:6px">X- &amp; Z-Berichte <span>revisionssicher in PostgreSQL gespeichert</span></li>
+      </ul>
     </div>
   </div>
-  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:center;margin-top:36px">
+  <div style="display:flex;align-items:center;gap:16px;margin:34px 0 22px">
+    <div style="flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--cyan))"></div>
+    <span style="padding:9px 24px;border-radius:999px;border:1.5px solid var(--cyan);background:rgba(56,189,248,.16);font-size:17px;font-weight:800;letter-spacing:.08em;color:#fff;white-space:nowrap;box-shadow:0 4px 18px rgba(56,189,248,.18)">ADMINISTRATION &nbsp;·&nbsp; <span style="color:var(--cyan);font-weight:600;letter-spacing:.02em">Administration ebenso einfach wie der Verkauf</span></span>
+    <div style="flex:1;height:2px;background:linear-gradient(90deg,var(--violet),transparent)"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:start">
+    <figure><div class="shot" style="height:326px"><img src="img/administration.png" alt="Admin-Übersicht" style="object-fit:contain;background:#f8fafc"></div></figure>
+    <div>
+      <h3 style="font-size:21px;margin-bottom:8px">Admin-Übersicht</h3>
+      <ul class="pts" style="margin-top:2px">
+        <li style="font-size:17px;margin-bottom:6px">Unternehmensübersicht <span>Mandanten, Filialen, Kassen</span></li>
+        <li style="font-size:17px;margin-bottom:6px">Rabatt-Kampagnen <span>Zeitraum, Produkte, Gruppen</span></li>
+        <li style="font-size:17px;margin-bottom:6px">Benutzerverwaltung <span>Rollen &amp; Rechte</span></li>
+        <li style="font-size:17px;margin-bottom:6px">DataBridge <span>Import / Export via ODBC</span></li>
+        <li style="font-size:17px;margin-bottom:6px">System-Logging <span>Server, Django, PostgreSQL</span></li>
+        <li style="font-size:17px;margin-bottom:6px">Erweiterte Verwaltung <span>Django Tabellenverwaltung für Administratoren</span></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="foot"><span>POS5 · Projektübersicht</span><span>05 / 12</span></footer>
+</section>
+
+<!-- ============ 6 · KONFIGURATION & VERERBUNG ============ -->
+<section class="page">
+  <header class="top"><div><div class="kicker">GUI · Unternehmensbaum &amp; Konfiguration</div><h2>Mandanten, Vererbung &amp; <em>Layout</em></h2></div><div class="logo">POS5</div></header>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:start">
+    <figure><div class="shot" style="height:358px"><img src="img/unternehmensbaum.png" alt="Unternehmensbaum"></div></figure>
+    <div>
+      <h3 style="font-size:22px;margin-bottom:10px">Unternehmensbaum &amp; Vererbung</h3>
+      <div class="card" style="padding:12px 16px;margin-bottom:10px;border-color:var(--cyan)"><h3 style="font-size:16px;color:var(--cyan);margin-bottom:3px">Mandanten weltweit</h3><p style="font-size:14.5px">Mandanten können auch in anderen Ländern liegen – mit eigener Rundungs- und Mehrwertsteuer-Berechnung.</p></div>
+      <div class="card" style="padding:12px 16px;margin-bottom:10px"><h3 style="font-size:16px;color:var(--violet);margin-bottom:3px">Vererbt wird</h3><p style="font-size:14.5px">Button-Raster-Konfiguration, Bilder (Logos) und Quittungstexte.</p></div>
+      <div class="inh" style="margin-top:8px;gap:8px">
+        <div class="box" style="padding:10px 6px;font-size:15px">Hauptlayer<small style="font-size:11.5px">Standard</small></div><div class="arrow" style="font-size:20px">→</div>
+        <div class="box" style="padding:10px 6px;font-size:15px">Mandant<small style="font-size:11.5px">überschreibt</small></div><div class="arrow" style="font-size:20px">→</div>
+        <div class="box" style="padding:10px 6px;font-size:15px">Filiale<small style="font-size:11.5px">überschreibt</small></div>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:430px 1fr;gap:30px;align-items:center;margin-top:34px">
     <div class="shot" style="height:358px"><img src="img/button-designer.png" alt="Button-Designer"></div>
     <div>
-      <h3 style="font-size:22px;margin-bottom:8px">Button-Designer</h3>
+      <h3 style="font-size:22px;margin-bottom:10px">Button-Designer</h3>
       <ul class="pts">
         <li style="font-size:17px;margin-bottom:8px">Kinderleichte Konfiguration der linken Kassenoberfläche bis in einzelne Filialen</li>
         <li style="font-size:17px;margin-bottom:8px">Buttons sind einzeln mit Unterlayer, Artikel oder vordefinierten Funktionen belegbar</li>
@@ -255,29 +292,6 @@
         <li style="font-size:17px;margin-bottom:8px">Beschriftung, Scan-Text/Funktion und Farbe</li>
       </ul>
     </div>
-  </div>
-  <footer class="foot"><span>POS5 · Projektübersicht</span><span>05 / 12</span></footer>
-</section>
-
-<!-- ============ 6 · MANDANTEN & VERERBUNG ============ -->
-<section class="page">
-  <header class="top"><div><div class="kicker">GUI · Unternehmensbaum</div><h2>Mandanten, Länder &amp; <em>Vererbung</em></h2></div><div class="logo">POS5</div></header>
-  <div style="display:grid;grid-template-columns:580px 1fr;gap:28px;align-items:start">
-    <figure><div class="shot" style="height:483px"><img src="img/unternehmensbaum.png" alt="Unternehmensbaum"></div>
-      <figcaption><b>Unternehmensbaum:</b> Mandant · Filiale · Kasse</figcaption></figure>
-    <div>
-      <div class="card" style="margin-bottom:16px;border-color:var(--cyan)"><h3 style="color:var(--cyan)">Mandanten weltweit</h3><p>Mandanten können auch in anderen Ländern liegen – mit eigener Rundungs- und Mehrwertsteuer-Berechnung.</p></div>
-      <div class="card"><h3 style="color:var(--violet)">Vererbt wird</h3><p>Button-Raster-Konfiguration, Bilder (Logos) und Quittungstexte.</p></div>
-    </div>
-  </div>
-  <div class="card" style="margin-top:26px;padding:22px 26px">
-    <h3 style="font-size:21px">Vererbungskette</h3>
-    <div class="inh">
-      <div class="box">Hauptlayer<small>Standard für alle</small></div><div class="arrow">→</div>
-      <div class="box">Mandant<small>überschreibt Hauptlayer</small></div><div class="arrow">→</div>
-      <div class="box">Filiale<small>überschreibt Mandant</small></div>
-    </div>
-    <p style="margin-top:14px;font-size:17px">Leere Felder erben automatisch vom übergeordneten Layer („Leer = Standard vom Mandant“).</p>
   </div>
   <footer class="foot"><span>POS5 · Projektübersicht</span><span>06 / 12</span></footer>
 </section>
